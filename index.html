@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumière Jewelry | The Art of Radiance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e9e8e7",
+                    "inverse-surface": "#303031",
+                    "surface-tint": "#5f5e5e",
+                    "on-surface": "#1b1c1c",
+                    "inverse-primary": "#c8c6c5",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ecc246",
+                    "on-secondary-fixed": "#241a00",
+                    "on-surface-variant": "#444748",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1b1c1c",
+                    "surface-container-low": "#f5f3f3",
+                    "outline-variant": "#c4c7c7",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#584400",
+                    "on-tertiary-container": "#838483",
+                    "on-primary-container": "#858383",
+                    "on-tertiary-fixed-variant": "#454746",
+                    "on-error-container": "#93000a",
+                    "background": "#fbf9f9",
+                    "surface-bright": "#fbf9f9",
+                    "surface": "#fbf9f9",
+                    "surface-container": "#efeded",
+                    "tertiary-fixed-dim": "#c6c7c5",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dbdad9",
+                    "secondary-fixed": "#ffe08e",
+                    "primary-fixed": "#e5e2e1",
+                    "secondary": "#755b00",
+                    "on-primary-fixed-variant": "#474746",
+                    "surface-variant": "#e3e2e2",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-secondary-container": "#735a00",
+                    "tertiary-container": "#1a1c1b",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#fed255",
+                    "primary-container": "#1c1b1b",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "primary": "#000000",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#1c1b1b",
+                    "outline": "#747878",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-container-highest": "#e3e2e2",
+                    "tertiary-fixed": "#e2e3e1",
+                    "brand-gold": "#C9A227"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "margin-mobile": "20px",
+                    "container-max": "1440px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "button": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .gold-underline-hover:hover {
+            border-bottom: 1px solid #C9A227;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-active .accordion-content {
+            max-height: 200px;
+        }
+        .accordion-active .accordion-icon {
+            transform: rotate(180deg);
+            color: #C9A227;
+        }
+        .accordion-active span:first-child {
+            color: #C9A227;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10 shadow-sm transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center px-5 py-4 max-w-container-max mx-auto">
+<!-- Left: Hamburger -->
+<button aria-label="Menu" class="p-2 -ml-2 text-on-surface hover:text-brand-gold transition-colors" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<!-- Center: Logo -->
+<a class="font-display-lg text-headline-md text-primary tracking-tighter uppercase" href="#">
+            Lumière
+        </a>
+<!-- Right: Actions -->
+<div class="flex items-center gap-2 -mr-2">
+<button aria-label="Search" class="p-2 text-on-surface hover:text-brand-gold transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+</button>
+<button aria-label="Cart" class="p-2 text-on-surface relative hover:text-brand-gold transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-brand-gold rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Navigation Overlay -->
+<div class="fixed inset-0 z-[60] bg-surface translate-x-full transition-transform duration-500 ease-in-out" id="mobile-menu">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-center px-5 py-4 border-b border-outline-variant/10">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-brand-gold">Navigation</span>
+<button class="p-2" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<nav class="flex flex-col p-8 space-y-8">
+<a class="font-display-lg text-headline-lg text-primary border-b border-brand-gold pb-4" href="#">Home</a>
+<a class="font-display-lg text-headline-lg text-on-surface border-b border-outline-variant/10 pb-4 hover:border-brand-gold hover:text-brand-gold transition-colors" href="#">Collections</a>
+<a class="font-display-lg text-headline-lg text-on-surface border-b border-outline-variant/10 pb-4 hover:border-brand-gold hover:text-brand-gold transition-colors" href="#">About</a>
+<a class="font-display-lg text-headline-lg text-on-surface border-b border-outline-variant/10 pb-4 hover:border-brand-gold hover:text-brand-gold transition-colors" href="#">Contact</a>
+</nav>
+<div class="mt-auto p-8 bg-surface-container-low">
+<p class="font-label-caps text-label-caps text-brand-gold mb-4 uppercase">Join the Atelier</p>
+<p class="font-body-md text-on-surface-variant mb-6">Receive exclusive previews of our seasonal collections.</p>
+<button class="w-full bg-brand-gold text-white py-4 font-button text-button uppercase tracking-widest shadow-lg">Sign Up</button>
+</div>
+</div>
+</div>
+<main class="mt-16">
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8hn3uf7HoYqZ1FIUQ-Di_AEHULvMMeWceTgBG7sc-IJHpqgIgVE-L3cJa0MScRRrCrBzEid68xaOAHXl-48-w13XLQEGZxO2jsp9tCPABbXZwK6Qfb7wRw0LadDeE2TePPuBHjhsVT4J0pqxMY23iXjK30H5mavKOURia1A1HooR990jggyXgHhoPUwzxN2XfNfpW7iZCK6NPzLAmMgwVMpfYcivryEPQHoEcAAZrTtVr3wrzqBku"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-5 pb-16 text-white text-center">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] mb-4 block text-brand-gold">The 2024 Atelier Edit</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile mb-8">The Art of Radiance</h1>
+<button class="px-10 py-5 bg-brand-gold text-white font-button text-button uppercase tracking-widest shadow-2xl active:scale-95 transition-transform">
+                Shop Collection
+            </button>
+</div>
+</section>
+<!-- Featured Collections (Horizontal Scroll) -->
+<section class="py-16 bg-white overflow-hidden">
+<div class="px-5 mb-8 flex justify-between items-end">
+<div>
+<h2 class="font-headline-lg text-primary">Signature Collections</h2>
+<div class="w-16 h-[2px] bg-brand-gold mt-2"></div>
+</div>
+<a class="font-label-caps text-label-caps text-brand-gold hover:opacity-70 transition-opacity" href="#">View All</a>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-5 px-5 snap-x">
+<!-- Collection Card 1 -->
+<div class="flex-none w-[280px] snap-start group">
+<div class="aspect-[4/5] bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvL6RkB7TNj15UvhWLz8Hn1yuunoRrRGTnYy9_53v6k3oJlAav8Us0_k0zoWkB_9wfp9din_GhG5JeXqIg01Uj07a2kwOCNEAC1KEJFyotS40OwNvT5Tum6Lep0Ng5g8n5nMTFNW7y1PXzFZrIghieIQ01YKWd4FLH4eRIxFjh0h-mOsCGkUna2ZX9i4vMDUSYuUZEJX77-ge8LSr4fsoTvc2xzK1yQ_-RG0D4edaGndZikgIEXXVo"/>
+</div>
+<h3 class="font-headline-md text-primary mb-1 group-hover:text-brand-gold transition-colors">Celestial</h3>
+<p class="font-body-md text-on-surface-variant">Ethereal diamonds inspired by the night sky.</p>
+</div>
+<!-- Collection Card 2 -->
+<div class="flex-none w-[280px] snap-start group">
+<div class="aspect-[4/5] bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcjScIGZw-EWlKyxjABCcfA_0IJ_2-yiSaCeK9AG00BZRoMQYYzkVu7a2qpUgZi3ao4NbeAMX3hPROzR_0tJ4-CHf8Q8qpitXgf_1al11akbw9WQOW5xNJn44VmUOxDHyDJklAHgeDYc1g0zFdg1teVHduiPfQZNYXm9wRbhJtZX-PU0Vv0-S8pKyOGq1FQtXfk3GjRLqH7_TnbSOUuKDTfH6W14w_AaLcoO8MYQSDdvF2moX-Xix4"/>
+</div>
+<h3 class="font-headline-md text-primary mb-1 group-hover:text-brand-gold transition-colors">Ethereal Pearl</h3>
+<p class="font-body-md text-on-surface-variant">Classic elegance reimagined for the modern muse.</p>
+</div>
+<!-- Collection Card 3 -->
+<div class="flex-none w-[280px] snap-start group">
+<div class="aspect-[4/5] bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMUZUwuOBdXxpl7yATx0tRDkLW6OrjfJdaGvKlzrM6WiX1zdYCTTSQlGQChXJJLMA5b_HQ8BbDBWO2TFjRaefzeCOtMRc9FcGw4oN9hY0iCLHLvhpgIfyCFnlZVETsMMA_hnXUzcTOjBE8gUFSVlfGgRAflEidbRqtvXobksyAoo002O9JtfY6bnnWd5Y9NbwgBAbXtC3xM-iEzZayfQTGZmp2VPK6OcWr2H4n6TNBYBcr6CK8M7T"/>
+</div>
+<h3 class="font-headline-md text-primary mb-1 group-hover:text-brand-gold transition-colors">Heritage Gold</h3>
+<p class="font-body-md text-on-surface-variant">Bold textures meet timeless craftsmanship.</p>
+</div>
+</div>
+</section>
+<!-- Best Sellers Grid -->
+<section class="py-16 px-5 bg-surface-container-lowest">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-primary">Best Sellers</h2>
+<p class="font-body-md text-brand-gold mt-2 italic">Most coveted pieces of the season</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Product 1 -->
+<div class="flex flex-col">
+<div class="relative aspect-[3/4] bg-surface mb-3 group overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcjScIGZw-EWlKyxjABCcfA_0IJ_2-yiSaCeK9AG00BZRoMQYYzkVu7a2qpUgZi3ao4NbeAMX3hPROzR_0tJ4-CHf8Q8qpitXgf_1al11akbw9WQOW5xNJn44VmUOxDHyDJklAHgeDYc1g0zFdg1teVHduiPfQZNYXm9wRbhJtZX-PU0Vv0-S8pKyOGq1FQtXfk3GjRLqH7_TnbSOUuKDTfH6W14w_AaLcoO8MYQSDdvF2moX-Xix4"/>
+<button class="absolute bottom-4 right-4 bg-brand-gold text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface-variant">Petite Emerald Pendant</h4>
+<span class="font-body-md font-semibold text-brand-gold mt-1">$1,250</span>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col">
+<div class="relative aspect-[3/4] bg-surface mb-3 group overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAGJgRi3PIaooAocmb9PDkWGYaYKeLnXJ8dRzT1pYHs04IJNNZ18i5V-2t-MQ0w7ugJp4lpjPhU_PyXiKJyx3LUOAN3pLwVS7I6pycWRXdxUUKhPxmtN_qHTghLqNQqsleFG0hCsW2PBrJhWBJL6WiGl7HZsQd6Yr9UA0OYomY_7s4su_yffEb8rhbymLgjwS3NezY1Mkr_dOtc1IioSgTw82O8mc7lePGcpilof9__T7hlwneVZvU"/>
+<button class="absolute bottom-4 right-4 bg-brand-gold text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface-variant">Trinity Diamond Band</h4>
+<span class="font-body-md font-semibold text-brand-gold mt-1">$2,800</span>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col">
+<div class="relative aspect-[3/4] bg-surface mb-3 group overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9U-lSg1T5cIHpNeAYEs0d2TfGWSblRbWmGjPvrK40Oxfuz2b218DJ6kJrVuODSdPSqfx0fffz4HWEg4pAtobaK6e8p8yqbIClWSPWCS3jD0sfeVVht1XoL7Nq7zoTQVfavIWGpOuo9Npp7BVdfbqep2GOXIQbRUJlDaE_cfT3YPS5G8StIbbWNFHtuPse4TzfF9rNE3dzraAFZPC-bv9Tza5DCxnoIdl6zmLIc1Ofn9GHSffO5M3p"/>
+<button class="absolute bottom-4 right-4 bg-brand-gold text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface-variant">Brilliant Studs</h4>
+<span class="font-body-md font-semibold text-brand-gold mt-1">$4,500</span>
+</div>
+<!-- Product 4 -->
+<div class="flex flex-col">
+<div class="relative aspect-[3/4] bg-surface mb-3 group overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfZzjUp-T7ylQDbeNYop34MHvxSUG5wTj1cexxSeqWaM0DRSPu1t1PAD3yKNGZZI9eR27E3KnZNw3k-GN0kLg7CXJtcqQUbb6HB27KWa1kVaf2Qdcf7S36YONOmTwcGK0rXENuHX9F6Czlt2V62dywOd5gpC6Q2jrdzvllPMGoD7vvVdpINRmJmEUi75-7yGzEYcW_4xiNop7mkAjORFaobgc1qOk7yGrXqVNYMh8Iqb20zyah3LBI"/>
+<button class="absolute bottom-4 right-4 bg-brand-gold text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
+<span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+</button>
+</div>
+<h4 class="font-label-caps text-label-caps uppercase text-on-surface-variant">Lumière Gold Cuff</h4>
+<span class="font-body-md font-semibold text-brand-gold mt-1">$1,950</span>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="w-full py-5 border border-brand-gold text-brand-gold font-button text-button uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-colors duration-300">
+                Explore All Products
+            </button>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-20 px-5 bg-white border-y border-outline-variant/10">
+<div class="space-y-12">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-brand-gold mb-4" style="font-variation-settings: 'wght' 200;">verified</span>
+<h3 class="font-headline-md text-primary mb-2">Ethically Sourced</h3>
+<p class="font-body-md text-on-surface-variant max-w-xs mx-auto">Every gemstone is conflict-free and responsibly curated from heritage mines.</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-brand-gold mb-4" style="font-variation-settings: 'wght' 200;">draw</span>
+<h3 class="font-headline-md text-primary mb-2">Master Artistry</h3>
+<p class="font-body-md text-on-surface-variant max-w-xs mx-auto">Handcrafted by master jewelers with decades of experience in high-end ateliers.</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-brand-gold mb-4" style="font-variation-settings: 'wght' 200;">local_shipping</span>
+<h3 class="font-headline-md text-primary mb-2">White Glove Delivery</h3>
+<p class="font-body-md text-on-surface-variant max-w-xs mx-auto">Complimentary insured shipping with signature arrival for all international orders.</p>
+</div>
+</div>
+</section>
+<!-- Promotional Banner -->
+<section class="relative w-full h-[442px] bg-primary flex items-center justify-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATNQ4fFc9RL1my0xzFnlFhu_jWsmaiI4m-Bbv1lkF_aQZ6QhjIwCXIrrNiWizuNgPprDRTD2FGYPk2TEXT8E0HExDhqIfN1DKOGUOfQGeitJ0FpzbUe4a6mnrx09chrp2ruOtx2a3SrveLVbp0A7uRY4gJi_XyAg8lbCxDQgK1kVnOnub_vGi0dOZQ5ST_v-xV6yk-pySIkYvw3WUJu588eMXwJzHYeP-dVNV9NzUzdPXwwMbqpu_Z"/>
+<div class="relative z-10 px-8 text-center text-white">
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-4 drop-shadow-lg">Bespoke Creations</h2>
+<p class="font-body-lg text-white/90 mb-8 italic drop-shadow-md">Let us craft your legacy together.</p>
+<a class="inline-block border-b-2 border-brand-gold pb-1 font-label-caps text-label-caps uppercase tracking-widest text-brand-gold" href="#">Inquire Now</a>
+</div>
+</section>
+<!-- Testimonial Swipe (Simulated) -->
+<section class="py-20 px-5 bg-surface-container-low overflow-hidden">
+<div class="relative text-center">
+<span class="material-symbols-outlined text-brand-gold opacity-40 text-6xl block mb-6">format_quote</span>
+<div class="flex overflow-x-auto snap-x hide-scrollbar">
+<div class="min-w-full snap-center px-4">
+<p class="font-display-lg-mobile text-2xl italic text-on-surface mb-8">"Lumière is not just jewelry; it's a feeling of pure light. The necklace I purchased is a masterpiece that I'll cherish forever."</p>
+<h5 class="font-label-caps text-label-caps uppercase tracking-widest text-brand-gold">— Elena M., London</h5>
+</div>
+</div>
+<div class="flex justify-center gap-2 mt-8">
+<span class="w-1.5 h-1.5 bg-brand-gold rounded-full"></span>
+<span class="w-1.5 h-1.5 bg-outline-variant rounded-full opacity-50"></span>
+<span class="w-1.5 h-1.5 bg-outline-variant rounded-full opacity-50"></span>
+</div>
+</div>
+</section>
+<!-- Instagram Gallery -->
+<section class="py-16">
+<div class="px-5 mb-8 text-center">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-[0.3em]">Follow Our Light</h2>
+<a class="text-brand-gold font-body-md block mt-2 hover:opacity-80" href="#">@lumiere_jewelry</a>
+</div>
+<div class="grid grid-cols-2 gap-1 px-1">
+<div class="aspect-square bg-surface-container overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr3yNOsrI6FYVQGYzwZad9mXTDXjBKJCL57dKlvuTIZOxuBQIFJ04b-iiIkBL2YclADUKAMBj7I807SRxZ16AIwezr0z84dF3BTPYSEDsQIV0lS7H3LKGHJbjbqPTBOlbwbVvezgRZAVBYOXXS8eWjFJeMLfIN8cXXxycX_4ElGV_Bej7nJF4KvsTNt6KM_O1N0AOUWVNYFYxfCggpkcdoWrYr6QQabkOV9RFgdmm2NHU2Rhy25mZm"/>
+<div class="absolute inset-0 bg-brand-gold/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb93JK4hqvqTRITIl0wHDq4c59AhcCw87vHPr6ri75Snda2A4EQH2HCs68lTOyAFQ67aW10a4J76qHb3fZEQBPtuQ6EKsWnpZaq9-E2WgSvioWkBmEJQfkmwgd-tY9FzowCWKwbQz7PEqLWML5i8fWQv8vGI5y1N0sPzRH863ao1RfH5J9GVH4JyGH_Q9N5W07UD0SwVMiKz904fBRj2pN_BawOpDOkl4oQ6e_dHBEcToeNue9ebkc"/>
+<div class="absolute inset-0 bg-brand-gold/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5QZrA455bsskUVq23OcN-nYRK5m4fqpqtLay6PlKyPve4pbko2uy8YmoehOHDSXINwqxJpxct9IWA1Rqu0JyiIFu1dvI9_FN2X_bm34YT8wTSU0964_mTWjmBNbOSIEyUtNH4X5BEYKntX4s64Px0k72O0j6K-tGbFuQZcR8dhdvoIpoqsUhNv6zzfV4A6ds9HxetLC54KQHAWobxD5umK3z3W2TWoW9aJSi1xTrLLcx66YsHIdtj"/>
+<div class="absolute inset-0 bg-brand-gold/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlh76Q0qqOdisFOqe5tNKTwRN8V5HwYcEpw6j7u6kYQ8F6OEVgBrOKKigYgt3JcYkCRRMh3PipCwDF0ao4PEwTiqgpBj00b5IMgPwkKlgRNK26A93wMWcC2DGasg8ECRWKXGeF2ymE3U0-7a1mDxdZciugkvzYciTuoWXz7HwE6VznKaXPU26LFk58d6uBY9-HTYceBYr-Fqyu-t1jHtuTkzu4vchKiv95mVn4gKru2ed4IstzoI-q"/>
+<div class="absolute inset-0 bg-brand-gold/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-16 px-5 bg-brand-gold text-white">
+<div class="text-center mb-10">
+<h2 class="font-headline-lg mb-4">L'Atelier Newsletter</h2>
+<p class="font-body-md text-white/90 mb-8">Join our community of collectors and be the first to experience new releases.</p>
+</div>
+<form class="space-y-6">
+<div class="relative">
+<input class="w-full bg-transparent border-b border-white/50 py-4 px-0 placeholder:text-white/60 focus:border-white focus:ring-0 text-button uppercase tracking-widest font-label-caps transition-colors" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+</div>
+<button class="w-full bg-white text-brand-gold py-4 font-button text-button uppercase tracking-widest shadow-xl active:scale-[0.98] transition-transform">
+                Subscribe
+            </button>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-16 px-5 border-t border-outline-variant/20">
+<div class="flex flex-col mb-12">
+<a class="font-display-lg text-headline-md text-primary mb-8" href="#">Lumière</a>
+<!-- Accordion Links -->
+<div class="space-y-2">
+<div class="accordion-item border-b border-outline-variant/10">
+<button class="w-full flex justify-between items-center py-4 text-left group" onclick="toggleAccordion(this)">
+<span class="font-label-caps text-label-caps uppercase tracking-widest group-hover:text-brand-gold transition-colors">Collections</span>
+<span class="material-symbols-outlined accordion-icon transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<ul class="pb-4 space-y-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-brand-gold transition-colors" href="#">All Collections</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="#">Engagement</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="#">One-of-a-Kind</a></li>
+</ul>
+</div>
+</div>
+<div class="accordion-item border-b border-outline-variant/10">
+<button class="w-full flex justify-between items-center py-4 text-left group" onclick="toggleAccordion(this)">
+<span class="font-label-caps text-label-caps uppercase tracking-widest group-hover:text-brand-gold transition-colors">Client Service</span>
+<span class="material-symbols-outlined accordion-icon transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<ul class="pb-4 space-y-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-brand-gold transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="#">Jewelry Care</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="#">Book an Appointment</a></li>
+</ul>
+</div>
+</div>
+<div class="accordion-item border-b border-outline-variant/10">
+<button class="w-full flex justify-between items-center py-4 text-left group" onclick="toggleAccordion(this)">
+<span class="font-label-caps text-label-caps uppercase tracking-widest group-hover:text-brand-gold transition-colors">About</span>
+<span class="material-symbols-outlined accordion-icon transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<ul class="pb-4 space-y-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-brand-gold transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-brand-gold transition-colors" href="#">Atelier</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-on-surface-variant hover:text-brand-gold transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 uppercase tracking-widest">
+            © 2024 Lumière Jewelry. All rights reserved. <br/>Designed for timeless elegance.
+        </p>
+</div>
+</footer>
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('translate-x-full')) {
+            menu.classList.remove('translate-x-full');
+            menu.classList.add('translate-x-0');
+            document.body.style.overflow = 'hidden';
+        } else {
+            menu.classList.remove('translate-x-0');
+            menu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        }
+    }
+
+    function toggleAccordion(button) {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('accordion-active');
+        
+        // Close all others
+        document.querySelectorAll('.accordion-item').forEach(el => {
+            el.classList.remove('accordion-active');
+        });
+        
+        // Toggle current
+        if (!isActive) {
+            item.classList.add('accordion-active');
+        }
+    }
+
+    // Header scroll effect
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        const nav = document.getElementById('top-nav');
+        
+        if (currentScroll <= 0) {
+            nav.classList.remove('shadow-lg');
+            nav.classList.remove('-translate-y-full');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // Down
+            nav.classList.add('-translate-y-full');
+        } else {
+            // Up
+            nav.classList.remove('-translate-y-full');
+            nav.classList.add('shadow-lg');
+        }
+        lastScroll = currentScroll;
+    });
+</script>
+</body></html>
