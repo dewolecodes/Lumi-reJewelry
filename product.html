@@ -152,45 +152,61 @@
             </button>
         </div>
         <nav class="flex flex-col gap-8">
-            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="index.html" onclick="toggleMenu()">Home</a>
-            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="collection.html" onclick="toggleMenu()">Collections</a>
-            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="about.html" onclick="toggleMenu()">About</a>
-            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="contact.html" onclick="toggleMenu()">Contact</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="index.html" onclick="toggleMenu()">Home</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="collection.html" onclick="toggleMenu()">Collections</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="about.html" onclick="toggleMenu()">About</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="contact.html" onclick="toggleMenu()">Contact</a>
         </nav>
         <div class="mt-auto pt-12 border-t border-gold-accent/10">
             <p class="font-label-caps text-[10px] text-on-surface-variant uppercase mb-4">The Lumière Experience</p>
             <div class="flex gap-4">
-                <a class="text-gold-accent" href="index.html"><span class="material-symbols-outlined">favorite</span></a>
-                <a class="text-gold-accent" href="index.html"><span class="material-symbols-outlined">shopping_bag</span></a>
+                <a class="text-gold-accent" href="index.html"><span
+                        class="material-symbols-outlined">favorite</span></a>
+                <a class="text-gold-accent" href="cart.html"><span
+                        class="material-symbols-outlined">shopping_bag</span></a>
             </div>
         </div>
     </div>
-    <header class="fixed top-0 w-full z-50 glass-header border-b border-gold-accent/20 shadow-sm transition-all duration-300">
-        <div class="flex justify-between items-center px-6 md:px-12 lg:px-margin-desktop py-4 lg:py-6 max-w-container-max mx-auto">
+    <header
+        class="fixed top-0 w-full z-50 glass-header border-b border-gold-accent/20 shadow-sm transition-all duration-300">
+        <div
+            class="flex justify-between items-center px-6 md:px-12 lg:px-margin-desktop py-4 lg:py-6 max-w-container-max mx-auto">
             <div class="flex-1 flex gap-4 lg:gap-8 items-center">
                 <nav class="hidden md:flex gap-4 lg:gap-6">
-                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="index.html">Home</a>
-                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="collection.html">Collections</a>
-                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="about.html">About</a>
-                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="contact.html">Contact</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="index.html">Home</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="collection.html">Collections</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="about.html">About</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="contact.html">Contact</a>
                 </nav>
                 <button class="md:hidden text-on-surface flex items-center" onclick="toggleMenu()">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
             <div class="flex-shrink-0 text-center">
-                <a class="font-display-lg text-2xl lg:text-headline-lg text-primary tracking-tighter uppercase" href="index.html">Lumière</a>
+                <a class="font-display-lg text-2xl lg:text-headline-lg text-primary tracking-tighter uppercase"
+                    href="index.html">Lumière</a>
             </div>
             <div class="flex-1 flex justify-end items-center gap-4 lg:gap-6">
-                <button class="text-on-surface hover:text-gold-accent transition-all duration-300">
+                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 flex items-center" href="search.html">
                     <span class="material-symbols-outlined font-bold">search</span>
-                </button>
-                <a class="hidden sm:block text-on-surface hover:text-gold-accent transition-all duration-300 relative" href="index.html">
+                </a>
+                <a class="hidden sm:block text-on-surface hover:text-gold-accent transition-all duration-300 relative"
+                    href="index.html">
                     <span class="material-symbols-outlined font-bold">favorite</span>
                 </a>
-                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 relative" href="index.html">
+                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 relative"
+                    href="cart.html">
                     <span class="material-symbols-outlined font-bold">shopping_bag</span>
-                    <span class="absolute -top-2 -right-2 bg-gold-accent text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">0</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-gold-accent text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">0</span>
                 </a>
             </div>
         </div>
@@ -209,25 +225,30 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                 <!-- Gallery Column -->
                 <div class="space-y-gutter">
-                    <div class="aspect-[4/5] md:aspect-[3/4] lg:aspect-[5/6] bg-surface-container overflow-hidden rounded-sm max-w-[420px] lg:max-w-[520px] mx-auto">
+                    <div
+                        class="aspect-[4/5] md:aspect-[3/4] lg:aspect-[5/6] bg-surface-container overflow-hidden rounded-sm max-w-[420px] lg:max-w-[520px] mx-auto">
                         <img class="w-full h-full object-cover"
                             data-alt="A macro studio photograph of the Ethereal Diamond Ring"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOzh6NMfkCGYs1NCTCy3g0SARjbWQf1Wudi2Ivh86UJe2dpZCVntA_IJ3k8ZT4-I2W749jXgNYYwJXlLMYvJUD-aZdPtOH0gbanCORqockwnLNV1457XmMHazHHxK-1jCOLXYcc7JvLP7zpVeVXaL7mg1AANwhnSN28tp1n_ortxTT9wsB8Jr5reRIrUphLHdQAUxA0HqYxoILito6htO2oKVmstHWcxXXHd0cwWqHY9ecbX1gEKpC" />
                     </div>
                     <div class="grid grid-cols-4 gap-3 md:gap-4">
-                        <div class="aspect-square bg-surface-container cursor-pointer border-2 border-secondary overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                        <div
+                            class="aspect-square bg-surface-container cursor-pointer border-2 border-secondary overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
                             <img class="w-full h-full object-cover" data-alt="Close-up view of ring band"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKqtbuTvD7jnGfNV0Lrv6cXazp8-rHrxtalevM68bN6dwK00BUne0LmoNfsDu4ssySzSv9R1f9N8YhkME9t2izUrNfhVBTupUw7uDps0Tbva1RvqfQ8Da8OJc7RMBxqkMSz8ETZ0bISSd0NcvFr1rp5-bsS09EPsDiqMEhrn5xT2AHIEsNPPeyIPSSfedmNxFqq9fCYNbLHPFG1WyrQOCCIL0aQhOtUspjdw_4xmNMR_PNxNKo0eQV" />
                         </div>
-                        <div class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                        <div
+                            class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
                             <img class="w-full h-full object-cover" data-alt="Lifestyle shot of ring"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt2BbqHSVZWMH0gkMTTZy5PMr3a6mAduldQ-xm1X2AvTKmqS0FLHj85E5kLgEtn1Sd6NxI-wMA9UICJo5vcSawApoFC3g-2DUYKRBtDAj2F3vFa_fTCfM1iYMRwCb2dzgrWT674pYN0ylpouigD07E5iAuyCPEjD-xTT2wOswvkPz8Pahh9jOR5AQyZ-WBR2p9KTMAIzXK9ejdG1DYuBKdUWRdO0KGoT8nJ9NGkDS-m90uUOnWq6eQ" />
                         </div>
-                        <div class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                        <div
+                            class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
                             <img class="w-full h-full object-cover" data-alt="Presentation box view"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuASr0lmdrzwvHY5LB-d5qPYTzKdXkb9MrgtZg9kDJkZ78h2q2rqZUHSrUHTo-12h1cOb5bQaPMIsASrYizX2CkBlRO-Gyi9P1_jtSRLDLJwsQujEKhWorCnHe86djRSi3BR7JByA-d6HqqkzedlsCABrPVwAZUubxkm6KeHXI6hKGli2MrcxUBwd0NPNyfOiInLCW-IZfxKi-hLKP4hVFoZXvN5lxv2tTTGAhVa-rHjDngVq89XBRE5" />
                         </div>
-                        <div class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                        <div
+                            class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
                             <img class="w-full h-full object-cover" data-alt="Professional jewelry render"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTooOPoRZWMDgnzFRZWhd3rtvVJhujlmK0FnkCCKv1pVzxCcJ_capBOZIcdEBN0a4Wpkp1zc_-uPCGPErBLij00mPJDAtqJ53hBiKy_PU-SLxIlRuWsi13oDRzPPo_24l6VT_p5Sc3OeR8UHWKwCWwXjH9MYzxlS_urnmms1H6cnqHWSgcpEkFSfTVYrjzcy_FfV9oZs4LNZfBCn3h3FB-dJyEJaOwQpz-yrFvdTn43Yx64CDS2MI2" />
                         </div>
@@ -308,7 +329,8 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
                     <!-- Item 1 -->
                     <div class="group cursor-pointer">
-                        <div class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
+                        <div
+                            class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 src="https://lh3.googleusercontent.com/aida/AP1WRLf8zLvUuxkISU3nanwUx7oEv9sFIDrUooJueHLoOvpKppoIlcHa97Y7GnMkBb1dAZ2d_owLyDszBCFJjNh1-WvTSVXGgJO-1RHPAZ6dsUnc30OLJbBwI76mxqjumogNynb7OXHa-4sNV2-b7QV6X7_o98wjKegi6VVFXZxbm2ZB7qZkD6hKX0OIJP0_r2a6OT0bt9Yx8Ff224BrKTGNLZH6oS2dS29Do_zmuwr2ia9rG9KiDUOIdgb9pk" />
                             <button
@@ -323,7 +345,8 @@
                     </div>
                     <!-- Item 2 -->
                     <div class="group cursor-pointer">
-                        <div class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
+                        <div
+                            class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 src="https://lh3.googleusercontent.com/aida/AP1WRLukwhgnDDjUcNKgDmNM-BQ6kf7roX3GTm-HBKXqT8PiuwAc8kFxGaPfZ9pHVsJFzw_-LSi6lIo2rY-3S8GA5MhLu9X2rqHHVgwvmuotW3ug082BzOTTUTjBHbnp1nkErnYcOnFIdmynS4yTpoqQFffCD_qCMd3LfiS_1wmftGGqjeG0giWZU9Al-sacwokLJQLXnk4-WELdgdK4w2snAcO2Bz30S_YUpT7LwIIFF2CleBciruYbqacEPyE" />
                             <button
@@ -338,7 +361,8 @@
                     </div>
                     <!-- Item 3 -->
                     <div class="group cursor-pointer">
-                        <div class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
+                        <div
+                            class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 data-alt="Macro product shot of a delicate platinum necklace"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YRX_lkUFzh45rwTqRyOBuKKx_x7zmDplnilfu0MQBIhCeFkyuiNNRtvB9rdVB00liDbbVPdKBlXoen6NNT3GMP6_cVCjl7fPqkLiesF4x-9wStcqT0aTlVSuVM-Kd1kk-TixLBOqetmFnoQarFqdJdzdKh8fmfCld6tOoeVYaShpdApgzAIXeWZlurdwc_YrYFEs9JgniPIFilMVwvLNtPdT4UQl_ZFJSfr3L4EW_iAvkbDGGYt7" />
@@ -357,54 +381,88 @@
         </div>
     </main>
     <!-- Footer -->
-    <footer class="bg-surface-container-lowest py-16 lg:py-section-gap px-6 md:px-12 lg:px-margin-desktop border-t-4 border-gold-accent">
+    <footer
+        class="bg-surface-container-lowest py-16 lg:py-section-gap px-6 md:px-12 lg:px-margin-desktop border-t-4 border-gold-accent">
         <div class="max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-gutter">
             <div class="col-span-1">
-                <span class="font-display-lg text-2xl lg:text-headline-md text-gold-accent uppercase block mb-6 lg:mb-8">Lumière</span>
-                <p class="text-on-surface-variant font-body-md text-xs lg:text-sm mb-6 lg:mb-8 leading-relaxed">Crafting light into timeless elegance since 1924. Our heritage is rooted in the pursuit of absolute brilliance.</p>
+                <span
+                    class="font-display-lg text-2xl lg:text-headline-md text-gold-accent uppercase block mb-6 lg:mb-8">Lumière</span>
+                <p class="text-on-surface-variant font-body-md text-xs lg:text-sm mb-6 lg:mb-8 leading-relaxed">Crafting
+                    light into timeless elegance since 1924. Our heritage is rooted in the pursuit of absolute
+                    brilliance.</p>
                 <div class="flex gap-4">
                     <a class="text-gold-accent hover:text-charcoal transition-all" href="index.html">
-                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                            </path>
+                        </svg>
                     </a>
                     <a class="text-gold-accent hover:text-charcoal transition-all" href="index.html">
-                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                            </path>
+                        </svg>
                     </a>
                 </div>
             </div>
             <div>
-                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Collections</h6>
+                <h6
+                    class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">
+                    Collections</h6>
                 <ul class="space-y-3 lg:space-y-4">
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Engagement Rings</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Fine Jewelry</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="contact.html">Bespoke Service</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">New Arrivals</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="collection.html">Engagement Rings</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="collection.html">Fine Jewelry</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="contact.html">Bespoke Service</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="collection.html">New Arrivals</a></li>
                 </ul>
             </div>
             <div>
-                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Support</h6>
+                <h6
+                    class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">
+                    Support</h6>
                 <ul class="space-y-3 lg:space-y-4">
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Shipping &amp; Returns</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Size Guide</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Product Care</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">FAQs</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">Shipping &amp; Returns</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">Size Guide</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">Product Care</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">FAQs</a></li>
                 </ul>
             </div>
             <div>
-                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Company</h6>
+                <h6
+                    class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">
+                    Company</h6>
                 <ul class="space-y-3 lg:space-y-4">
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Sustainability</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Privacy Policy</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Terms of Service</a></li>
-                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Boutique Locator</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">Sustainability</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">Privacy Policy</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">Terms of Service</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all"
+                            href="index.html">Boutique Locator</a></li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-container-max mx-auto mt-12 lg:mt-24 pt-8 border-t border-gold-accent/20 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-on-surface-variant font-body-md text-[10px] lg:text-xs text-center md:text-left">© 2024 Lumière Jewelry. All rights reserved. <span class="text-gold-accent ml-2">Mastercrafted Heritage.</span></p>
+        <div
+            class="max-w-container-max mx-auto mt-12 lg:mt-24 pt-8 border-t border-gold-accent/20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-on-surface-variant font-body-md text-[10px] lg:text-xs text-center md:text-left">© 2024
+                Lumière Jewelry. All rights reserved. <span class="text-gold-accent ml-2">Mastercrafted Heritage.</span>
+            </p>
             <div class="flex gap-6 opacity-80">
                 <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">payments</span>
                 <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">credit_card</span>
-                <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">account_balance_wallet</span>
+                <span
+                    class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">account_balance_wallet</span>
             </div>
         </div>
     </footer>

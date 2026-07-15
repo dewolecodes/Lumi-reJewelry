@@ -1,67 +1,75 @@
 <!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Shopping Bag | Lumière Jewelry</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Bag & Collections | Lumière Jewelry</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "on-tertiary-fixed-variant": "#454746",
-                        "error": "#ba1a1a",
+                        "surface-container-high": "#e9e8e7",
+                        "inverse-surface": "#303031",
                         "surface-tint": "#5f5e5e",
-                        "surface-dim": "#dbdad9",
-                        "on-primary-container": "#858383",
-                        "surface-container-highest": "#e3e2e2",
-                        "surface-bright": "#fbf9f9",
-                        "on-error-container": "#93000a",
-                        "background": "#fbf9f9",
-                        "primary-fixed": "#e5e2e1",
-                        "on-surface-variant": "#444748",
-                        "tertiary-fixed-dim": "#c6c7c5",
-                        "surface-container-lowest": "#ffffff",
-                        "primary-container": "#1c1b1b",
-                        "on-secondary-fixed": "#241a00",
-                        "on-secondary-container": "#735a00",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "surface-variant": "#e3e2e2",
-                        "on-tertiary-fixed": "#1a1c1b",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed": "#1c1b1b",
-                        "inverse-on-surface": "#f2f0f0",
-                        "tertiary-fixed": "#e2e3e1",
-                        "secondary-fixed": "#ffe08e",
-                        "outline-variant": "#c4c7c7",
                         "on-surface": "#1b1c1c",
-                        "surface-container-low": "#f5f3f3",
-                        "outline": "#747878",
                         "inverse-primary": "#c8c6c5",
-                        "tertiary": "#000000",
-                        "on-secondary-fixed-variant": "#584400",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
                         "secondary-fixed-dim": "#ecc246",
-                        "on-tertiary-container": "#838483",
-                        "tertiary-container": "#1a1c1b",
-                        "surface-container": "#efeded",
-                        "secondary": "#755b00",
-                        "error-container": "#ffdad6",
-                        "surface": "#fbf9f9",
-                        "secondary-container": "#fed255",
-                        "on-primary-fixed-variant": "#474746",
-                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#241a00",
+                        "on-surface-variant": "#444748",
                         "on-tertiary": "#ffffff",
                         "on-background": "#1b1c1c",
+                        "surface-container-low": "#f5f3f3",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-tertiary-container": "#838483",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-fixed-variant": "#454746",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf9f9",
+                        "surface-bright": "#fbf9f9",
+                        "surface": "#fbf9f9",
+                        "surface-container": "#efeded",
+                        "tertiary-fixed-dim": "#c6c7c5",
                         "on-error": "#ffffff",
-                        "surface-container-high": "#e9e8e7",
+                        "surface-dim": "#dbdad9",
+                        "secondary-fixed": "#ffe08e",
+                        "primary-fixed": "#e5e2e1",
+                        "secondary": "#C9A227",
+                        "on-primary-fixed-variant": "#474746",
+                        "surface-variant": "#e3e2e2",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-secondary-container": "#735a00",
+                        "tertiary-container": "#1a1c1b",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#C9A227",
+                        "primary-container": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1b",
                         "primary": "#000000",
-                        "inverse-surface": "#303031",
-                        "brand-gold": "#C9A227"
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline": "#747878",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#e3e2e2",
+                        "tertiary-fixed": "#e2e3e1",
+                        "gold-accent": "#C9A227",
+                        "charcoal": "#1A1A1A"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -70,292 +78,708 @@
                         "full": "0.75rem"
                     },
                     "spacing": {
+                        "unit": "4px",
                         "margin-mobile": "20px",
-                        "section-gap": "120px",
                         "container-max": "1440px",
                         "margin-desktop": "80px",
                         "gutter": "24px",
-                        "unit": "4px"
+                        "section-gap": "140px",
+                        "section-gap-sm": "80px"
                     },
                     "fontFamily": {
-                        "headline-md": ["Playfair Display"],
-                        "button": ["Montserrat"],
-                        "headline-lg": ["Playfair Display"],
-                        "label-caps": ["Montserrat"],
-                        "display-lg-mobile": ["Playfair Display"],
                         "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
                         "body-md": ["Montserrat"],
-                        "body-lg": ["Montserrat"]
+                        "label-caps": ["Montserrat"],
+                        "button": ["Montserrat"]
                     },
                     "fontSize": {
-                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }]
                     }
                 },
             },
         }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        .gold-underline-hover:hover {
-            border-bottom: 1px solid #C9A227;
+
+        .nav-link-underline {
+            position: relative;
         }
+
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #C9A227;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+
+        .glass-header {
+            background: rgba(251, 249, 249, 0.9);
+            backdrop-filter: blur(12px);
+        }
+
         .subtle-shadow {
-            box-shadow: 0 4px 20px rgba(26, 26, 26, 0.04);
+            box-shadow: 0 4px 30px rgba(26, 26, 26, 0.05);
         }
+
         .item-row {
             transition: background-color 0.3s ease;
         }
+
         .item-row:hover {
-            background-color: #F9F9F7;
+            background-color: rgba(201, 162, 39, 0.02);
         }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-brand-gold/20">
-<!-- TopNavBar -->
-<header class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<div class="flex items-center gap-8">
-<div class="md:hidden">
-<span class="material-symbols-outlined cursor-pointer">menu</span>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Home</a>
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Collections</a>
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">About</a>
-<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Contact</a>
-</nav>
-</div>
-<div class="absolute left-1/2 -translate-x-1/2">
-<span class="font-display-lg-mobile text-display-lg-mobile uppercase tracking-widest text-primary">Lumière</span>
-</div>
-<div class="flex items-center gap-6">
-<div class="hidden lg:block relative">
-<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline">search</span>
-<input class="pl-10 pr-4 py-1 bg-transparent border-b border-primary focus:outline-none font-label-caps text-label-caps w-40 transition-all focus:w-60" placeholder="SEARCH" type="text"/>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform" data-icon="favorite">favorite</span>
-<div class="relative cursor-pointer hover:scale-110 transition-transform">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-<span class="absolute -top-1 -right-1 bg-brand-gold text-white text-[8px] px-1 rounded-full font-bold">2</span>
-</div>
-</div>
-</div>
-</div>
-</header>
-<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
-<div class="flex flex-col gap-4 mb-12">
-<h1 class="font-headline-lg text-headline-lg text-primary">Shopping Bag</h1>
-<a class="font-label-caps text-label-caps text-outline hover:text-primary flex items-center gap-2 group transition-colors" href="#">
-<span class="material-symbols-outlined text-[16px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
-                CONTINUE SHOPPING
-            </a>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-<!-- Items List -->
-<div class="lg:col-span-8 flex flex-col">
-<!-- Header Labels -->
-<div class="hidden md:grid grid-cols-12 pb-4 border-b border-outline-variant px-4">
-<div class="col-span-6 font-label-caps text-label-caps text-outline">PRODUCT</div>
-<div class="col-span-3 text-center font-label-caps text-label-caps text-outline">QUANTITY</div>
-<div class="col-span-3 text-right font-label-caps text-label-caps text-outline">TOTAL</div>
-</div>
-<!-- Item 1 -->
-<div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-outline-variant px-4 item-row">
-<div class="col-span-12 md:col-span-6 flex gap-6 items-center">
-<div class="w-32 h-40 bg-surface-container-low overflow-hidden flex-shrink-0">
-<img class="w-full h-full object-cover mix-blend-multiply" data-alt="A macro studio photograph of an Ethereal Diamond Ring from Lumière Jewelry. The central oval-cut diamond is surrounded by a sparkling halo of smaller round diamonds set in highly polished white gold. The lighting is soft and high-key, creating a clean luxury boutique aesthetic with subtle reflections on the metal's surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPp4uAmKXUodJTZe5eatnhNXSyFchkKz5_RefSiX33jLDaFvw6pnCNvQJoU4LxRCYSmp5n-6oiDxLSd15aVi6AVRGWIak68JqCstaVq3tLIj9xNye6eYdTg0xqdbBBBWgMi8hYIN20eXiQu1g2b_jiL95ZCBjuj0tHTbqeFSJMm20_JLH85dWaVb_Ahe9WQDTItkagYXQeCHmpIusfwIWMdVGV3jwaqlIq0rp6LhyHogqGQZur5Vhg"/>
-</div>
-<div class="flex flex-col gap-1">
-<h3 class="font-headline-md text-headline-md text-primary">Ethereal Diamond Ring</h3>
-<p class="font-label-caps text-label-caps text-outline">WHITE GOLD / 1.5 CT OVAL</p>
-<p class="font-body-md text-body-md text-primary mt-2">$8,450.00</p>
-</div>
-</div>
-<div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
-<div class="flex items-center border border-outline-variant px-4 py-2 gap-6">
-<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">remove</button>
-<span class="font-body-md text-body-md">1</span>
-<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">add</button>
-</div>
-</div>
-<div class="col-span-12 md:col-span-3 text-right flex flex-col md:flex-row md:justify-end items-center gap-4 mt-6 md:mt-0">
-<span class="font-body-lg text-body-lg text-primary">$8,450.00</span>
-<button class="material-symbols-outlined text-outline hover:text-error transition-colors p-2">close</button>
-</div>
-</div>
-<!-- Item 2 -->
-<div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-outline-variant px-4 item-row">
-<div class="col-span-12 md:col-span-6 flex gap-6 items-center">
-<div class="w-32 h-40 bg-surface-container-low overflow-hidden flex-shrink-0">
-<img class="w-full h-full object-cover mix-blend-multiply" data-alt="Close up photography of Lumière Brilliant Stud earrings featuring two perfectly cut round diamonds. The earrings are set in minimalist four-prong platinum settings, presented against a soft grey textured fabric background that evokes a sense of high-end elegance. Bright, diffused lighting highlights the internal brilliance and fire of the gemstones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24kzcmSpDUiuwzFDBirothUgQDC1R0_8lQpm2y_d0s6kJZjXF2lDVrfOUS4FmRReondjTZhVD8ZDqT8ZkzEdz4HbGSICLOdhn6sFDur2Ku7UsfHaHc88FcDKUvAsY9q9JRZnDgSjWeB_Yz04U5en2HNeeXAquh88dzev_i7Pt5EWSczeo5Lx1ODtVkur2SU0O7t198gLcrl2ZneFYgQuclaoIQA0AqC0bvjGsZx3tBNoc2IjgyZGL"/>
-</div>
-<div class="flex flex-col gap-1">
-<h3 class="font-headline-md text-headline-md text-primary">Brilliant Studs</h3>
-<p class="font-label-caps text-label-caps text-outline">PLATINUM / 0.5 CT PAIR</p>
-<p class="font-body-md text-body-md text-primary mt-2">$2,200.00</p>
-</div>
-</div>
-<div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
-<div class="flex items-center border border-outline-variant px-4 py-2 gap-6">
-<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">remove</button>
-<span class="font-body-md text-body-md">1</span>
-<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">add</button>
-</div>
-</div>
-<div class="col-span-12 md:col-span-3 text-right flex flex-col md:flex-row md:justify-end items-center gap-4 mt-6 md:mt-0">
-<span class="font-body-lg text-body-lg text-primary">$2,200.00</span>
-<button class="material-symbols-outlined text-outline hover:text-error transition-colors p-2">close</button>
-</div>
-</div>
-</div>
-<!-- Order Summary -->
-<div class="lg:col-span-4 bg-surface-container-low p-8 subtle-shadow flex flex-col gap-8 sticky top-32">
-<h2 class="font-headline-md text-headline-md text-primary">Order Summary</h2>
-<div class="flex flex-col gap-4">
-<div class="flex justify-between items-center">
-<span class="font-label-caps text-label-caps text-outline">SUBTOTAL</span>
-<span class="font-body-lg text-body-lg text-primary">$10,650.00</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="font-label-caps text-label-caps text-outline">SHIPPING</span>
-<span class="font-body-md text-body-md text-brand-gold italic">Complimentary</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="font-label-caps text-label-caps text-outline">TAXES</span>
-<span class="font-body-md text-body-md text-primary">Calculated at checkout</span>
-</div>
-</div>
-<div class="h-px bg-outline-variant w-full"></div>
-<div class="flex justify-between items-center">
-<span class="font-label-caps text-label-caps text-primary font-bold">ESTIMATED TOTAL</span>
-<span class="font-display-lg-mobile text-[28px] text-primary">$10,650.00</span>
-</div>
-<div class="flex flex-col gap-4">
-<button class="w-full bg-primary text-white py-4 font-button text-button uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-gold-accent/30 overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+        id="mobile-menu-overlay" onclick="toggleMenu()"></div>
+    <div class="fixed top-0 right-0 h-full w-[80%] max-sm:w-[85%] max-w-sm bg-white z-[70] translate-x-full transition-transform duration-500 ease-in-out flex flex-col p-8"
+        id="mobile-menu">
+        <div class="flex justify-between items-center mb-12">
+            <span class="font-display-lg text-2xl text-primary tracking-tighter uppercase">Lumière</span>
+            <button class="text-primary hover:text-gold-accent transition-colors" onclick="toggleMenu()">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-8">
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="index.html" onclick="toggleMenu()">Home</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="collection.html" onclick="toggleMenu()">Collections</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="about.html" onclick="toggleMenu()">About</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="contact.html" onclick="toggleMenu()">Contact</a>
+        </nav>
+        <div class="mt-auto pt-12 border-t border-gold-accent/10">
+            <p class="font-label-caps text-[10px] text-on-surface-variant uppercase mb-4">The Lumière Experience</p>
+            <div class="flex gap-4">
+                <a class="text-gold-accent" href="index.html"><span
+                        class="material-symbols-outlined">favorite</span></a>
+                <a class="text-gold-accent" href="cart.html"><span
+                        class="material-symbols-outlined">shopping_bag</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 glass-header border-b border-gold-accent/20 shadow-sm transition-all duration-300">
+        <div
+            class="flex justify-between items-center px-6 md:px-12 lg:px-margin-desktop py-4 lg:py-6 max-w-container-max mx-auto">
+            <div class="flex-1 flex gap-4 lg:gap-8 items-center">
+                <nav class="hidden md:flex gap-4 lg:gap-6">
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="index.html">Home</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="collection.html">Collections</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="about.html">About</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="contact.html">Contact</a>
+                </nav>
+                <button class="md:hidden text-on-surface flex items-center" onclick="toggleMenu()">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <div class="flex-shrink-0 text-center">
+                <a class="font-display-lg text-2xl lg:text-headline-lg text-primary tracking-tighter uppercase"
+                    href="index.html">Lumière</a>
+            </div>
+            <div class="flex-1 flex justify-end items-center gap-4 lg:gap-6">
+                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 flex items-center" href="search.html">
+                    <span class="material-symbols-outlined font-bold">search</span>
+                </a>
+                <a class="hidden sm:block text-on-surface hover:text-gold-accent transition-all duration-300 relative"
+                    href="index.html">
+                    <span class="material-symbols-outlined font-bold">favorite</span>
+                </a>
+                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 relative"
+                    href="cart.html">
+                    <span class="material-symbols-outlined font-bold">shopping_bag</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-gold-accent text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold"
+                        id="cart-count">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="pt-32 lg:pt-40 pb-24 px-6 md:px-12 lg:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+        
+        <!-- Page Title & Header -->
+        <div class="flex flex-col gap-4 mb-16 text-center md:text-left">
+            <h1 class="font-display-lg text-4xl lg:text-headline-lg text-primary tracking-tight">Shopping Bag & Collection</h1>
+            <div>
+                <a class="font-label-caps text-[10px] text-outline hover:text-gold-accent flex items-center justify-center md:justify-start gap-2 group transition-colors tracking-[0.15em] uppercase"
+                    href="collection.html">
+                    <span class="material-symbols-outlined text-[16px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    Continue Shopping
+                </a>
+            </div>
+        </div>
+
+        <!-- Dynamic Cart Tab Navigation -->
+        <div class="flex gap-8 md:gap-12 justify-center md:justify-start border-b border-gold-accent/20 mb-12 font-label-caps text-xs md:text-sm tracking-widest uppercase">
+            <button id="tab-btn-bag" class="pb-4 border-b-2 border-gold-accent text-gold-accent font-bold transition-all duration-300" onclick="switchCartTab('bag')">
+                Shopping Bag (<span id="tab-bag-count">2</span>)
+            </button>
+            <button id="tab-btn-wishlist" class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-gold-accent transition-all duration-300" onclick="switchCartTab('wishlist')">
+                Wishlist (<span id="tab-wish-count">3</span>)
+            </button>
+            <button id="tab-btn-bespoke" class="pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-gold-accent transition-all duration-300" onclick="switchCartTab('bespoke')">
+                Bespoke Inquiries (<span id="tab-bespoke-count">1</span>)
+            </button>
+        </div>
+
+        <!-- ==================== TAB 1: SHOPPING BAG ==================== -->
+        <div id="cart-tab-bag" class="cart-tab-content grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <!-- Items List -->
+            <div class="lg:col-span-8 flex flex-col">
+                <!-- Header Labels -->
+                <div class="hidden md:grid grid-cols-12 pb-6 border-b border-gold-accent/20 px-4">
+                    <div class="col-span-6 font-label-caps text-[11px] tracking-[0.2em] text-outline uppercase">Product</div>
+                    <div class="col-span-3 text-center font-label-caps text-[11px] tracking-[0.2em] text-outline uppercase">Quantity</div>
+                    <div class="col-span-3 text-right font-label-caps text-[11px] tracking-[0.2em] text-outline uppercase">Total</div>
+                </div>
+
+                <!-- Shopping Bag Rows Container -->
+                <div id="bag-items-list">
+                    <!-- Item 1: Ethereal Diamond Ring -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row" data-price="8450" id="item-ethereal-ring">
+                        <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
+                            <div class="w-24 h-32 bg-surface-container-low overflow-hidden flex-shrink-0 border border-gold-accent/5">
+                                <img alt="Ethereal Diamond Ring" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPp4uAmKXUodJTZe5eatnhNXSyFchkKz5_RefSiX33jLDaFvw6pnCNvQJoU4LxRCYSmp5n-6oiDxLSd15aVi6AVRGWIak68JqCstaVq3tLIj9xNye6eYdTg0xqdbBBBWgMi8hYIN20eXiQu1g2b_jiL95ZCBjuj0tHTbqeFSJMm20_JLH85dWaVb_Ahe9WQDTItkagYXQeCHmpIusfwIWMdVGV3jwaqlIq0rp6LhyHogqGQZur5Vhg" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h3 class="font-headline-md text-lg lg:text-xl text-primary">Ethereal Diamond Ring</h3>
+                                <p class="font-label-caps text-[9px] lg:text-[10px] tracking-[0.15em] text-outline uppercase">White Gold / 1.5 CT Oval</p>
+                                <p class="font-body-md text-sm text-gold-accent mt-2">$8,450.00</p>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
+                            <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
+                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-ethereal-ring', -1)">remove</button>
+                                <span class="font-body-md text-sm qty-val">1</span>
+                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-ethereal-ring', 1)">add</button>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
+                            <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
+                            <div class="flex items-center gap-4">
+                                <span class="font-body-lg text-primary font-medium row-total">$8,450.00</span>
+                                <button class="material-symbols-outlined text-outline hover:text-error transition-colors p-1" onclick="removeItem('item-ethereal-ring')">close</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Brilliant Studs -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row" data-price="2200" id="item-brilliant-studs">
+                        <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
+                            <div class="w-24 h-32 bg-surface-container-low overflow-hidden flex-shrink-0 border border-gold-accent/5">
+                                <img alt="Brilliant Studs" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24kzcmSpDUiuwzFDBirothUgQDC1R0_8lQpm2y_d0s6kJZjXF2lDVrfOUS4FmRReondjTZhVD8ZDqT8ZkzEdz4HbGSICLOdhn6sFDur2Ku7UsfHaHc88FcDKUvAsY9q9JRZnDgSjWeB_Yz04U5en2HNeeXAquh88dzev_i7Pt5EWSczeo5Lx1ODtVkur2SU0O7t198gLcrl2ZneFYgQuclaoIQA0AqC0bvjGsZx3tBNoc2IjgyZGL" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h3 class="font-headline-md text-lg lg:text-xl text-primary">Brilliant Studs</h3>
+                                <p class="font-label-caps text-[9px] lg:text-[10px] tracking-[0.15em] text-outline uppercase">Platinum / 0.5 CT Pair</p>
+                                <p class="font-body-md text-sm text-gold-accent mt-2">$2,200.00</p>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
+                            <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
+                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-brilliant-studs', -1)">remove</button>
+                                <span class="font-body-md text-sm qty-val">1</span>
+                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-brilliant-studs', 1)">add</button>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
+                            <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
+                            <div class="flex items-center gap-4">
+                                <span class="font-body-lg text-primary font-medium row-total">$2,200.00</span>
+                                <button class="material-symbols-outlined text-outline hover:text-error transition-colors p-1" onclick="removeItem('item-brilliant-studs')">close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empty State (Hidden) -->
+                <div id="cart-empty-state" class="hidden flex flex-col items-center justify-center text-center py-20 px-6">
+                    <span class="material-symbols-outlined text-gold-accent text-5xl mb-6">shopping_bag</span>
+                    <h3 class="font-headline-md text-2xl text-primary mb-4">Your Bag is Empty</h3>
+                    <p class="text-on-surface-variant font-body-md text-sm max-w-sm mb-8">Discover our exquisite lines of high jewelry and curated masterworks to begin your collection.</p>
+                    <a href="collection.html" class="bg-gold-accent text-white font-button text-xs uppercase tracking-widest px-10 py-4 hover:bg-charcoal transition-all duration-300 shadow-md">
+                        Explore Collections
+                    </a>
+                </div>
+            </div>
+
+            <!-- Order Summary Card -->
+            <div id="cart-summary-card" class="lg:col-span-4 bg-white p-8 md:p-10 border border-gold-accent/15 subtle-shadow flex flex-col gap-8 sticky top-32">
+                <h2 class="font-headline-md text-xl lg:text-2xl text-primary border-b border-gold-accent/10 pb-4">Order Summary</h2>
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="font-label-caps text-[10px] tracking-widest text-outline uppercase">Subtotal</span>
+                        <span class="font-body-md text-primary font-medium" id="cart-subtotal">$10,650.00</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="font-label-caps text-[10px] tracking-widest text-outline uppercase">Shipping</span>
+                        <span class="font-body-md text-gold-accent italic">Complimentary</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="font-label-caps text-[10px] tracking-widest text-outline uppercase">Taxes</span>
+                        <span class="font-body-md text-outline">Calculated at checkout</span>
+                    </div>
+                </div>
+                <div class="h-px bg-gold-accent/10 w-full"></div>
+                <div class="flex justify-between items-end">
+                    <span class="font-label-caps text-xs text-primary font-bold tracking-widest">Estimated Total</span>
+                    <span class="font-headline-md text-2xl lg:text-3xl text-primary" id="cart-total">$10,650.00</span>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <button class="w-full bg-primary text-white py-4 font-button text-xs uppercase tracking-[0.2em] hover:bg-gold-accent transition-all duration-500 shadow-md">
                         Proceed to Checkout
                     </button>
-<div class="flex items-center gap-4 justify-center py-2">
-<span class="material-symbols-outlined text-[18px] text-outline">lock</span>
-<span class="font-label-caps text-label-caps text-outline">SECURE CHECKOUT</span>
-</div>
-</div>
-<div class="flex flex-col gap-3 mt-4">
-<p class="font-label-caps text-[10px] text-outline uppercase tracking-wider text-center">Payment Methods</p>
-<div class="flex justify-center gap-4 opacity-50">
-<span class="material-symbols-outlined text-2xl">credit_card</span>
-<span class="material-symbols-outlined text-2xl">account_balance</span>
-<span class="material-symbols-outlined text-2xl">payments</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Suggestions -->
-<section class="mt-section-gap">
-<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-outline-variant pb-4">Complete the Look</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Featured Suggestion -->
-<div class="group cursor-pointer">
-<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-4">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A luxury jewelry product shot of sapphire and diamond drop earrings by Lumière. The earrings feature a delicate silver filigree top and a large pear-shaped deep blue sapphire hanging elegantly. Photographed on a clean white background with minimal soft shadows to emphasize their exquisite craftsmanship and sophisticated color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATJzMiwbENFUfaMx81Fd9Y0ZjokzH2eGIVRGECzbC7ROskCuCqaz9FGX3acp10OCir2BjZ0fjmvvW2PK2W52YvzkBVAxCFHGFFibcRJsFlpTraBCLzoO4iFP-QMgLUXhOc3OYDfHX526QrqB0wGtoDxRC5P3RDZyyC_ELbOjv-LTp1UDqyjWeogUDuQikKWGP6uuWh2409Nf4HOY1Mh0wqttcB1dA0vTopaHt7xlqk59Ei3UXHmk9N"/>
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<h4 class="font-label-caps text-label-caps text-primary">Royal Sapphire Drops</h4>
-<p class="font-body-md text-body-md text-outline">$4,800.00</p>
-</div>
-<span class="material-symbols-outlined text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity">add_shopping_cart</span>
-</div>
-</div>
-<!-- Repeat logic for more placeholders if desired -->
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-outline-variant">
-<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto gap-12">
-<div class="flex flex-col gap-6">
-<span class="font-headline-sm text-headline-sm text-primary uppercase tracking-[0.2em]">Lumière</span>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Crafting timeless elegance since 1926. Every piece tells a story of light and luxury.</p>
-<div class="flex gap-6 mt-2">
-<span class="material-symbols-outlined text-outline cursor-pointer hover:text-brand-gold transition-colors">public</span>
-<span class="material-symbols-outlined text-outline cursor-pointer hover:text-brand-gold transition-colors">share</span>
-<span class="material-symbols-outlined text-outline cursor-pointer hover:text-brand-gold transition-colors">mail</span>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-16">
-<div class="flex flex-col gap-4">
-<h5 class="font-label-caps text-label-caps text-primary border-b border-brand-gold/30 pb-2">Client Services</h5>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Book an Appointment</a>
-</div>
-<div class="flex flex-col gap-4">
-<h5 class="font-label-caps text-label-caps text-primary border-b border-brand-gold/30 pb-2">Legal</h5>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-<div class="flex flex-col gap-6 w-full md:w-80">
-<h5 class="font-label-caps text-label-caps text-primary">Newsletter</h5>
-<div class="relative border-b border-primary">
-<input class="w-full bg-transparent py-2 focus:outline-none font-label-caps text-label-caps" placeholder="YOUR EMAIL ADDRESS" type="email"/>
-<button class="absolute right-0 bottom-2 font-label-caps text-label-caps text-brand-gold hover:text-primary transition-colors">JOIN</button>
-</div>
-<p class="font-body-md text-[12px] text-outline italic">Experience exclusivity redefined in your inbox.</p>
-</div>
-</div>
-<div class="border-t border-outline-variant px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="font-body-md text-body-md text-on-surface-variant text-[12px]">© 2026 Lumière Jewelry. All rights reserved.</span>
-<div class="flex gap-8">
-<span class="font-label-caps text-label-caps text-outline hover:text-primary cursor-pointer">PARIS</span>
-<span class="font-label-caps text-label-caps text-outline hover:text-primary cursor-pointer">LONDON</span>
-<span class="font-label-caps text-label-caps text-outline hover:text-primary cursor-pointer">NEW YORK</span>
-</div>
-</div>
-</footer>
-<script>
-        // Micro-interactions for quantity selectors
-        document.querySelectorAll('button.material-symbols-outlined').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const isAdd = this.innerText === 'add';
-                const isRemove = this.innerText === 'remove';
-                if (isAdd || isRemove) {
-                    const counter = this.parentElement.querySelector('span');
-                    let val = parseInt(counter.innerText);
-                    if (isAdd) val++;
-                    if (isRemove && val > 1) val--;
-                    counter.innerText = val;
-                    
-                    // Trigger a "thinking" pulse on the button
-                    this.style.transform = 'scale(0.8)';
-                    setTimeout(() => this.style.transform = 'scale(1)', 100);
-                }
-            });
-        });
+                    <div class="flex items-center gap-3 justify-center py-2 text-outline">
+                        <span class="material-symbols-outlined text-[16px]">lock</span>
+                        <span class="font-label-caps text-[9px] tracking-widest uppercase">Secure checkout</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <p class="font-label-caps text-[8px] text-outline uppercase tracking-[0.2em] text-center opacity-70">Accepted Payments</p>
+                    <div class="flex justify-center gap-6 text-gold-accent opacity-70">
+                        <span class="material-symbols-outlined text-2xl">credit_card</span>
+                        <span class="material-symbols-outlined text-2xl">payments</span>
+                        <span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        // Sticky Header scroll effect
+        <!-- ==================== TAB 2: WISHLIST ==================== -->
+        <div id="cart-tab-wishlist" class="cart-tab-content hidden">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Wishlist Item 1: Sapphire Night Drops -->
+                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
+                        <img alt="Sapphire Night Drops" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/sapphire-night-drops.jpg" />
+                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                            onclick="moveToCart('Sapphire Night Drops', 2450, 'images/sapphire-night-drops.jpg', 'Evening Gala')">
+                            Add to Bag
+                        </button>
+                    </div>
+                    <div class="text-center w-full relative">
+                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">Sapphire Night Drops</h4>
+                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">Evening Gala</p>
+                        <p class="font-headline-md text-gold-accent text-lg mb-4">$2,450.00</p>
+                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeWishlistItem(this)">
+                            <span class="material-symbols-outlined text-lg">delete</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wishlist Item 2: Celestial Choker -->
+                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
+                        <img alt="Celestial Choker" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/celestial-choker.jpg" />
+                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                            onclick="moveToCart('Celestial Choker', 5800, 'images/celestial-choker.jpg', 'Heritage Collection')">
+                            Add to Bag
+                        </button>
+                    </div>
+                    <div class="text-center w-full relative">
+                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">Celestial Choker</h4>
+                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">Heritage Collection</p>
+                        <p class="font-headline-md text-gold-accent text-lg mb-4">$5,800.00</p>
+                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeWishlistItem(this)">
+                            <span class="material-symbols-outlined text-lg">delete</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wishlist Item 3: Lumière Cuff -->
+                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
+                        <img alt="Lumière Cuff" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="images/lumiere-cuff.jpg" />
+                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                            onclick="moveToCart('Lumière Cuff', 5800, 'images/lumiere-cuff.jpg', 'Sculpted Forms')">
+                            Add to Bag
+                        </button>
+                    </div>
+                    <div class="text-center w-full relative">
+                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">Lumière Cuff</h4>
+                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">Sculpted Forms</p>
+                        <p class="font-headline-md text-gold-accent text-lg mb-4">$5,800.00</p>
+                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeWishlistItem(this)">
+                            <span class="material-symbols-outlined text-lg">delete</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== TAB 3: BESPOKE REQUESTS ==================== -->
+        <div id="cart-tab-bespoke" class="cart-tab-content hidden max-w-4xl mx-auto">
+            <div class="bg-white border border-gold-accent/15 subtle-shadow p-8 md:p-12">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-gold-accent/10 pb-6 mb-8">
+                    <div>
+                        <span class="font-label-caps text-[9px] text-gold-accent font-bold tracking-widest uppercase mb-1 block">Case Ref: #2026-L832</span>
+                        <h3 class="font-headline-md text-2xl text-primary">Bespoke Art-Deco Emerald Ring</h3>
+                    </div>
+                    <span class="bg-gold-accent/10 border border-gold-accent/30 text-gold-accent font-label-caps text-[10px] tracking-widest px-4 py-2 uppercase">
+                        Design Finalized
+                    </span>
+                </div>
+
+                <!-- Custom Concierge Narrative Card -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-2 space-y-6">
+                        <div>
+                            <h5 class="font-label-caps text-[10px] text-outline tracking-wider uppercase mb-1">Commission Details</h5>
+                            <p class="text-on-surface font-body-md text-sm leading-relaxed">Art Deco inspired ring styled in 18k Yellow Gold featuring a central 2.4 Carat Octagon Emerald cut stone. Flanked by tapered baguette diamond accents.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h5 class="font-label-caps text-[10px] text-outline tracking-wider uppercase mb-1">Requested By</h5>
+                                <p class="text-on-surface font-body-md text-sm">Eleanor Vance</p>
+                            </div>
+                            <div>
+                                <h5 class="font-label-caps text-[10px] text-outline tracking-wider uppercase mb-1">Date Lodged</h5>
+                                <p class="text-on-surface font-body-md text-sm">July 10, 2026</p>
+                            </div>
+                        </div>
+                        <div class="bg-surface p-4 border border-gold-accent/5">
+                            <h5 class="font-label-caps text-[10px] text-gold-accent tracking-wider uppercase mb-1 font-bold">Concierge Note</h5>
+                            <p class="text-on-surface-variant font-body-md text-xs italic">"We have locked in the design sketch and sourced the central emerald from our exclusive partners. Awaiting deposit clearance to start the manual casting in our Paris boutique."</p>
+                        </div>
+                    </div>
+                    <div class="bg-surface border border-gold-accent/10 p-6 flex flex-col justify-between items-center text-center">
+                        <span class="material-symbols-outlined text-gold-accent text-3xl font-bold mb-2">workspace_premium</span>
+                        <h4 class="font-label-caps text-xs text-primary tracking-widest uppercase">Est. Commission Cost</h4>
+                        <span class="font-headline-md text-2xl text-gold-accent my-3">$14,500.00</span>
+                        <button class="w-full bg-gold-accent text-white py-3 font-button text-[10px] uppercase tracking-widest hover:bg-charcoal transition-all duration-300">
+                            Pay Design Deposit ($1,500)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest py-16 lg:py-section-gap px-6 md:px-12 lg:px-margin-desktop border-t-4 border-gold-accent">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-gutter">
+            <!-- Brand Info -->
+            <div class="col-span-1">
+                <span class="font-display-lg text-2xl lg:text-headline-md text-gold-accent uppercase block mb-6 lg:mb-8">Lumière</span>
+                <p class="text-on-surface-variant font-body-md text-xs lg:text-sm mb-6 lg:mb-8 leading-relaxed">Crafting light into timeless elegance since 1924. Our heritage is rooted in the pursuit of absolute brilliance.</p>
+                <div class="flex gap-4">
+                    <a class="text-gold-accent hover:text-charcoal transition-all" href="index.html">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                        </svg>
+                    </a>
+                    <a class="text-gold-accent hover:text-charcoal transition-all" href="index.html">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Collections</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Engagement Rings</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Fine Jewelry</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="contact.html">Bespoke Service</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">New Arrivals</a></li>
+                </ul>
+            </div>
+            <!-- Customer Service -->
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Support</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Shipping &amp; Returns</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Size Guide</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Product Care</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Legal -->
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Company</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Sustainability</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Privacy Policy</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Terms of Service</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Boutique Locator</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto mt-12 lg:mt-24 pt-8 border-t border-gold-accent/20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-on-surface-variant font-body-md text-[10px] lg:text-xs text-center md:text-left">© 2026 Lumière Jewelry. All rights reserved. <span class="text-gold-accent ml-2">Mastercrafted Heritage.</span></p>
+            <div class="flex gap-6 opacity-80">
+                <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">payments</span>
+                <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">credit_card</span>
+                <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">account_balance_wallet</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Tab system
+        function switchCartTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.cart-tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+
+            // Show target tab content
+            const activeTab = document.getElementById(`cart-tab-${tabId}`);
+            if (activeTab) {
+                activeTab.classList.remove('hidden');
+            }
+
+            // Update button styles
+            const buttons = {
+                bag: document.getElementById('tab-btn-bag'),
+                wishlist: document.getElementById('tab-btn-wishlist'),
+                bespoke: document.getElementById('tab-btn-bespoke')
+            };
+
+            for (const key in buttons) {
+                if (key === tabId) {
+                    buttons[key].className = "pb-4 border-b-2 border-gold-accent text-gold-accent font-bold transition-all duration-300";
+                } else {
+                    buttons[key].className = "pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-gold-accent transition-all duration-300";
+                }
+            }
+        }
+
+        // Qty and Recalculations
+        function adjustQty(itemId, delta) {
+            const itemRow = document.getElementById(itemId);
+            if (!itemRow) return;
+
+            const qtySpan = itemRow.querySelector('.qty-val');
+            let qty = parseInt(qtySpan.innerText);
+            qty += delta;
+
+            if (qty < 1) return;
+
+            qtySpan.innerText = qty;
+
+            const unitPrice = parseFloat(itemRow.getAttribute('data-price'));
+            const rowTotalSpan = itemRow.querySelector('.row-total');
+            const totalRowCost = unitPrice * qty;
+            rowTotalSpan.innerText = `$${totalRowCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
+            recalcCartTotal();
+        }
+
+        // Remove item from bag
+        function removeItem(itemId) {
+            const itemRow = document.getElementById(itemId);
+            if (!itemRow) return;
+
+            itemRow.style.opacity = '0';
+            setTimeout(() => {
+                itemRow.remove();
+                recalcCartTotal();
+
+                // Check count of items
+                const bagContainer = document.getElementById('bag-items-list');
+                const remainingItems = bagContainer.querySelectorAll('.item-row').length;
+                
+                // Update counts
+                document.getElementById('tab-bag-count').innerText = remainingItems;
+                document.getElementById('cart-count').innerText = remainingItems;
+
+                if (remainingItems === 0) {
+                    bagContainer.classList.add('hidden');
+                    document.getElementById('cart-empty-state').classList.remove('hidden');
+                    document.getElementById('cart-summary-card').classList.add('hidden');
+                }
+            }, 300);
+        }
+
+        // Calculate and update order summary totals
+        function recalcCartTotal() {
+            let subtotal = 0;
+            let bagCount = 0;
+
+            document.querySelectorAll('#bag-items-list .item-row').forEach(row => {
+                const qtyVal = parseInt(row.querySelector('.qty-val').innerText);
+                const price = parseFloat(row.getAttribute('data-price'));
+                subtotal += (price * qtyVal);
+                bagCount += qtyVal;
+            });
+
+            const formattedSubtotal = `$${subtotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const totalEl = document.getElementById('cart-total');
+
+            if (subtotalEl) subtotalEl.innerText = formattedSubtotal;
+            if (totalEl) totalEl.innerText = formattedSubtotal;
+            
+            // Sync with navbar badge
+            const totalCount = document.querySelectorAll('#bag-items-list .item-row').length;
+            document.getElementById('tab-bag-count').innerText = totalCount;
+            document.getElementById('cart-count').innerText = totalCount;
+        }
+
+        // Move item from wishlist to active cart bag
+        function moveToCart(itemName, price, imgUrl, category) {
+            const bagContainer = document.getElementById('bag-items-list');
+            const emptyState = document.getElementById('cart-empty-state');
+            const summaryCard = document.getElementById('cart-summary-card');
+
+            // Hide empty state if showing
+            emptyState.classList.add('hidden');
+            bagContainer.classList.remove('hidden');
+            summaryCard.classList.remove('hidden');
+
+            const itemId = 'item-' + itemName.toLowerCase().replace(/\s+/g, '-');
+
+            // Check if item already exists in cart, then increment quantity instead
+            const existingRow = document.getElementById(itemId);
+            if (existingRow) {
+                adjustQty(itemId, 1);
+                switchCartTab('bag');
+                return;
+            }
+
+            // Create new DOM row for item
+            const newRow = document.createElement('div');
+            newRow.className = "grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row opacity-0 transition-opacity duration-300";
+            newRow.id = itemId;
+            newRow.setAttribute('data-price', price);
+            newRow.innerHTML = `
+                <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
+                    <div class="w-24 h-32 bg-surface-container-low overflow-hidden flex-shrink-0 border border-gold-accent/5">
+                        <img alt="${itemName}" class="w-full h-full object-cover" src="${imgUrl}" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <h3 class="font-headline-md text-lg lg:text-xl text-primary">${itemName}</h3>
+                        <p class="font-label-caps text-[9px] lg:text-[10px] tracking-[0.15em] text-outline uppercase">${category}</p>
+                        <p class="font-body-md text-sm text-gold-accent mt-2">$${price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
+                    <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
+                        <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('${itemId}', -1)">remove</button>
+                        <span class="font-body-md text-sm qty-val">1</span>
+                        <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('${itemId}', 1)">add</button>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
+                    <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
+                    <div class="flex items-center gap-4">
+                        <span class="font-body-lg text-primary font-medium row-total">$${price.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                        <button class="material-symbols-outlined text-outline hover:text-error transition-colors p-1" onclick="removeItem('${itemId}')">close</button>
+                    </div>
+                </div>
+            `;
+
+            bagContainer.appendChild(newRow);
+            setTimeout(() => {
+                newRow.classList.remove('opacity-0');
+                recalcCartTotal();
+            }, 50);
+
+            switchCartTab('bag');
+        }
+
+        // Delete an item from wishlist
+        function removeWishlistItem(btn) {
+            const card = btn.closest('.group');
+            if (!card) return;
+
+            card.style.opacity = '0';
+            setTimeout(() => {
+                card.remove();
+                const totalWishCount = document.querySelectorAll('#cart-tab-wishlist > div > div').length;
+                document.getElementById('tab-wish-count').innerText = totalWishCount;
+
+                if (totalWishCount === 0) {
+                    document.getElementById('cart-tab-wishlist').innerHTML = `
+                        <div class="flex flex-col items-center justify-center text-center py-20 px-6">
+                            <span class="material-symbols-outlined text-gold-accent text-5xl mb-6">favorite</span>
+                            <h3 class="font-headline-md text-2xl text-primary mb-4">Your Wishlist is Empty</h3>
+                            <p class="text-on-surface-variant font-body-md text-sm max-w-sm mb-8">Save items here while shopping to view or purchase them later.</p>
+                            <a href="collection.html" class="bg-gold-accent text-white font-button text-xs uppercase tracking-widest px-10 py-4 hover:bg-charcoal transition-all duration-300 shadow-md">
+                                View Collections
+                            </a>
+                        </div>
+                    `;
+                }
+            }, 300);
+        }
+
+        // Header Scroll Effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 20) {
-                header.classList.add('subtle-shadow');
-                header.classList.remove('bg-background/80');
-                header.classList.add('bg-background');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4', 'lg:py-6');
+                header.classList.add('bg-white');
             } else {
-                header.classList.remove('subtle-shadow');
-                header.classList.add('bg-background/80');
-                header.classList.remove('bg-background');
+                header.classList.add('py-4', 'lg:py-6');
+                header.classList.remove('py-2');
+                header.classList.remove('bg-white');
             }
         });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const panel = document.getElementById('mobile-menu');
+            const isOpening = panel.classList.contains('translate-x-full');
+
+            if (isOpening) {
+                overlay.classList.remove('pointer-events-none', 'opacity-0');
+                overlay.classList.add('opacity-100', 'pointer-events-auto');
+                panel.classList.remove('translate-x-full');
+                panel.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+                panel.classList.add('translate-x-full');
+                panel.classList.remove('translate-x-0');
+                document.body.style.overflow = '';
+            }
+        }
     </script>
-</body></html>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Contact & Concierge | Lumière Jewelry</title>
+    <title>Search Catalog | Lumière Jewelry</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -149,12 +149,6 @@
             border-bottom-color: #1A1A1A;
             box-shadow: none;
         }
-
-        .map-grid-pattern {
-            background-size: 20px 20px;
-            background-image: linear-gradient(to right, rgba(201, 162, 39, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(201, 162, 39, 0.05) 1px, transparent 1px);
-        }
     </style>
 </head>
 
@@ -177,7 +171,7 @@
                 href="collection.html" onclick="toggleMenu()">Collections</a>
             <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
                 href="about.html" onclick="toggleMenu()">About</a>
-            <a class="font-button text-lg uppercase tracking-widest text-gold-accent"
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
                 href="contact.html" onclick="toggleMenu()">Contact</a>
         </nav>
         <div class="mt-auto pt-12 border-t border-gold-accent/10">
@@ -203,7 +197,7 @@
                         href="collection.html">Collections</a>
                     <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
                         href="about.html">About</a>
-                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-gold-accent border-b-2 border-gold-accent pb-1"
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
                         href="contact.html">Contact</a>
                 </nav>
                 <button class="md:hidden text-on-surface flex items-center" onclick="toggleMenu()">
@@ -215,7 +209,7 @@
                     href="index.html">Lumière</a>
             </div>
             <div class="flex-1 flex justify-end items-center gap-4 lg:gap-6">
-                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 flex items-center" href="search.html">
+                <a class="text-gold-accent flex items-center" href="search.html">
                     <span class="material-symbols-outlined font-bold">search</span>
                 </a>
                 <a class="hidden sm:block text-on-surface hover:text-gold-accent transition-all duration-300 relative"
@@ -233,163 +227,51 @@
         </div>
     </header>
 
-    <main class="pt-16 lg:pt-24">
-        <!-- Hero Section -->
-        <section class="relative h-[45vh] min-h-[350px] lg:h-[450px] overflow-hidden bg-charcoal">
-            <div class="absolute inset-0 bg-black/40 z-10"></div>
-            <div class="absolute inset-0 w-full h-full scale-105 transition-transform duration-[10000ms] hover:scale-100">
-                <img alt="Lumière Concierge Salon" class="w-full h-full object-cover"
-                    src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1400&q=80" />
+    <main class="pt-24 lg:pt-36 min-h-screen pb-20">
+        <!-- Search Input Bar Section -->
+        <section class="max-w-4xl mx-auto px-6 pt-12 text-center">
+            <span class="font-label-caps text-xs text-gold-accent tracking-widest uppercase mb-3 block font-bold">Boutique Search</span>
+            <h1 class="font-display-lg text-3xl md:text-4xl text-primary mb-8">Search the Collection</h1>
+            
+            <div class="relative max-w-2xl mx-auto border-b-2 border-gold-accent pb-3 mb-6">
+                <span class="material-symbols-outlined absolute left-2 top-1/2 transform -translate-y-1/2 text-gold-accent text-2xl">search</span>
+                <input id="search-input" type="text" placeholder="Search for rings, necklaces, sapphire, gold..."
+                    class="w-full bg-transparent border-none pl-12 pr-6 py-2 text-lg focus:ring-0 text-primary font-body-md placeholder:text-outline/50"
+                    oninput="performSearch()" autofocus />
+                <button id="search-clear-btn" class="hidden absolute right-2 top-1/2 transform -translate-y-1/2 text-outline hover:text-gold-accent transition-colors" onclick="clearSearch()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
             </div>
-            <div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
-                <span class="font-label-caps text-xs lg:text-label-caps uppercase tracking-[0.3em] mb-4 text-gold-accent font-bold drop-shadow-md">Exclusive Concierge</span>
-                <h1 class="font-display-lg text-4xl md:text-5xl lg:text-display-lg text-white mb-6 drop-shadow-lg leading-tight">Concierge & Appointments</h1>
-                <div class="w-32 h-[1px] bg-gradient-to-r from-transparent via-gold-accent to-transparent mx-auto"></div>
+
+            <!-- Popular Search tags -->
+            <div class="flex flex-wrap gap-3 justify-center items-center font-label-caps text-[10px] tracking-widest text-outline uppercase mb-12">
+                <span>Popular:</span>
+                <button onclick="setQuery('Rings')" class="border border-gold-accent/20 hover:border-gold-accent hover:text-gold-accent px-4 py-1.5 transition-all">Rings</button>
+                <button onclick="setQuery('Sapphire')" class="border border-gold-accent/20 hover:border-gold-accent hover:text-gold-accent px-4 py-1.5 transition-all">Sapphire</button>
+                <button onclick="setQuery('Gold')" class="border border-gold-accent/20 hover:border-gold-accent hover:text-gold-accent px-4 py-1.5 transition-all">Gold</button>
+                <button onclick="setQuery('Necklaces')" class="border border-gold-accent/20 hover:border-gold-accent hover:text-gold-accent px-4 py-1.5 transition-all">Necklaces</button>
+                <button onclick="setQuery('Watches')" class="border border-gold-accent/20 hover:border-gold-accent hover:text-gold-accent px-4 py-1.5 transition-all">Watches</button>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="py-16 md:py-24 lg:py-section-gap px-6 md:px-12 lg:px-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-                
-                <!-- Left Column: Boutique Information & Custom Map Graphics -->
-                <div class="lg:col-span-5 flex flex-col gap-12">
-                    <div>
-                        <span class="font-label-caps text-xs text-gold-accent tracking-widest uppercase mb-2 block font-bold">Lumière Salons</span>
-                        <h2 class="font-display-lg text-3xl lg:text-headline-lg text-primary mb-6">Our Boutiques</h2>
-                        <p class="text-on-surface-variant font-body-md leading-relaxed text-sm md:text-base">We invite you to experience our mastercrafted creations in person. Walk-ins are welcome, but we advise arranging a private booking for dedicated boutique consultants.</p>
-                    </div>
-
-                    <!-- Boutique list -->
-                    <div class="space-y-8">
-                        <!-- Paris Boutique -->
-                        <div class="border-l-2 border-gold-accent pl-6 py-2">
-                            <h4 class="font-headline-md text-lg text-primary tracking-wide mb-2 uppercase">Paris Salon</h4>
-                            <p class="text-on-surface-variant text-sm font-body-md mb-2">12 Place Vendôme, 75001 Paris, France</p>
-                            <p class="text-on-surface-variant text-sm font-body-md flex items-center gap-2 mb-1">
-                                <span class="material-symbols-outlined text-gold-accent text-base">call</span>
-                                +33 (0) 1 42 60 00 00
-                            </p>
-                            <p class="text-on-surface-variant text-sm font-body-md flex items-center gap-2">
-                                <span class="material-symbols-outlined text-gold-accent text-base">mail</span>
-                                paris@lumierejewelry.com
-                            </p>
-                        </div>
-
-                        <!-- London Boutique -->
-                        <div class="border-l-2 border-gold-accent pl-6 py-2">
-                            <h4 class="font-headline-md text-lg text-primary tracking-wide mb-2 uppercase">London Salon</h4>
-                            <p class="text-on-surface-variant text-sm font-body-md mb-2">24 Old Bond Street, London W1S 4PT, UK</p>
-                            <p class="text-on-surface-variant text-sm font-body-md flex items-center gap-2 mb-1">
-                                <span class="material-symbols-outlined text-gold-accent text-base">call</span>
-                                +44 (0) 20 7493 0000
-                            </p>
-                            <p class="text-on-surface-variant text-sm font-body-md flex items-center gap-2">
-                                <span class="material-symbols-outlined text-gold-accent text-base">mail</span>
-                                london@lumierejewelry.com
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Schematic Gold-Line Map Mock -->
-                    <div class="relative h-60 w-full bg-charcoal border border-gold-accent/25 overflow-hidden flex items-center justify-center map-grid-pattern group">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
-                        <div class="relative z-10 text-center px-4">
-                            <span class="material-symbols-outlined text-gold-accent text-4xl mb-3 font-bold animate-pulse">location_on</span>
-                            <h5 class="font-label-caps text-xs text-white tracking-widest uppercase mb-1">Boutique Finder</h5>
-                            <p class="text-gold-accent/80 text-[10px] uppercase tracking-wider mb-4">View Interactive Salon Directory</p>
-                            <button class="border border-gold-accent text-gold-accent font-button text-[10px] tracking-widest uppercase px-6 py-2.5 hover:bg-gold-accent hover:text-white transition-all duration-300">
-                                Open Map
-                            </button>
-                        </div>
-                        <!-- Abstract lines to resemble a high end schematic map -->
-                        <div class="absolute w-[180px] h-[1px] bg-gold-accent/20 rotate-12 top-1/3 left-10"></div>
-                        <div class="absolute w-[240px] h-[1px] bg-gold-accent/20 -rotate-45 bottom-1/4 left-1/4"></div>
-                        <div class="absolute w-[1px] h-[150px] bg-gold-accent/25 left-1/2 top-10"></div>
-                        <div class="absolute w-[1px] h-[100px] bg-gold-accent/15 left-1/3 bottom-5"></div>
-                        <div class="absolute w-8 h-8 rounded-full border border-gold-accent/30 flex items-center justify-center top-12 right-20">
-                            <span class="w-2 h-2 bg-gold-accent rounded-full"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Interactive Appointment & Message Form -->
-                <div class="lg:col-span-7 bg-white border border-gold-accent/10 shadow-sm p-8 md:p-12 relative overflow-hidden">
-                    <!-- Form Title -->
-                    <div class="mb-10">
-                        <span class="font-label-caps text-xs text-gold-accent tracking-widest uppercase mb-2 block font-bold">The Lumiere Experience</span>
-                        <h2 class="font-headline-md text-2xl text-primary">Arrange a Consultation</h2>
-                        <p class="text-on-surface-variant font-body-md text-xs lg:text-sm mt-2">Submit your inquiry, and our concierge specialists will contact you within 24 hours.</p>
-                    </div>
-
-                    <!-- Interactive Form -->
-                    <form id="contact-form" class="space-y-8" onsubmit="handleFormSubmit(event)">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="flex flex-col gap-2">
-                                <label class="font-label-caps text-[10px] tracking-widest text-outline uppercase" for="client-name">Full Name</label>
-                                <input id="client-name" name="name" class="input-minimal w-full font-body-md py-3 text-sm lg:text-base text-primary" placeholder="Enter your name" required type="text" />
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <label class="font-label-caps text-[10px] tracking-widest text-outline uppercase" for="client-email">Email Address</label>
-                                <input id="client-email" name="email" class="input-minimal w-full font-body-md py-3 text-sm lg:text-base text-primary" placeholder="Enter your email" required type="email" />
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="flex flex-col gap-2">
-                                <label class="font-label-caps text-[10px] tracking-widest text-outline uppercase" for="client-phone">Telephone Number</label>
-                                <input id="client-phone" name="phone" class="input-minimal w-full font-body-md py-3 text-sm lg:text-base text-primary" placeholder="Enter your phone number (optional)" type="tel" />
-                            </div>
-                            <div class="flex flex-col gap-2">
-                                <label class="font-label-caps text-[10px] tracking-widest text-outline uppercase" for="inquiry-type">Inquiry Type</label>
-                                <select id="inquiry-type" name="inquiry_type" class="input-minimal w-full font-body-md py-3 text-sm lg:text-base text-primary focus:ring-0 focus:border-charcoal cursor-pointer">
-                                    <option value="Bespoke Commission">Bespoke Commission</option>
-                                    <option value="Private Salon Viewing">Private Salon Viewing</option>
-                                    <option value="Product Sourcing">Product Sourcing</option>
-                                    <option value="General Concierge">General Concierge Inquiry</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <label class="font-label-caps text-[10px] tracking-widest text-outline uppercase" for="client-message">Your Message</label>
-                            <textarea id="client-message" name="message" rows="4" class="input-minimal w-full font-body-md py-3 text-sm lg:text-base text-primary resize-none" placeholder="Describe your request or the piece you are interested in..." required></textarea>
-                        </div>
-
-                        <div class="pt-4">
-                            <button type="submit" class="w-full bg-gold-accent text-white font-button text-xs lg:text-button py-4 uppercase tracking-[0.2em] hover:bg-charcoal transition-all duration-500 shadow-lg transform active:scale-[0.98]">
-                                Request Consultation
-                            </button>
-                        </div>
-                    </form>
-
-                    <!-- Success Animation State Overlay (hidden initially) -->
-                    <div id="form-success-overlay" class="absolute inset-0 bg-white flex flex-col items-center justify-center text-center p-8 opacity-0 pointer-events-none transition-opacity duration-500 z-10">
-                        <div class="w-16 h-16 rounded-full border-2 border-gold-accent flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined text-gold-accent text-3xl font-bold">done</span>
-                        </div>
-                        <span class="font-label-caps text-xs text-gold-accent tracking-widest uppercase mb-2 font-bold">Request Received</span>
-                        <h3 class="font-headline-md text-2xl text-primary mb-4">Submission Successful</h3>
-                        <p class="text-on-surface-variant font-body-md text-xs lg:text-sm max-w-sm leading-relaxed mb-8">Thank you. A Lumière concierge associate has been assigned to your request and will reach out to you shortly.</p>
-                        <button onclick="resetContactForm()" class="border border-gold-accent text-gold-accent font-button text-xs uppercase tracking-widest px-8 py-3 hover:bg-gold-accent hover:text-white transition-all duration-300">
-                            Back to Form
-                        </button>
-                    </div>
-                </div>
+            
+            <div class="text-left font-label-caps text-xs text-outline tracking-wider uppercase mb-6" id="search-result-info">
+                All Products &amp; Collections
             </div>
         </section>
 
-        <!-- Newsletter (Same as Index) -->
-        <section class="py-16 md:py-24 lg:py-section-gap bg-surface-container-lowest border-y-2 border-gold-accent/20">
-            <div class="max-w-container-max mx-auto px-6 md:px-12 lg:px-margin-desktop text-center">
-                <span class="font-label-caps text-xs lg:text-label-caps uppercase tracking-[0.4em] mb-4 block text-gold-accent font-bold">Exclusivity Awaits</span>
-                <h2 class="font-display-lg text-3xl lg:text-display-lg mb-6 lg:mb-8">Join the Lumière Circle</h2>
-                <p class="font-body-lg text-sm lg:text-body-lg text-on-surface-variant mb-10 lg:mb-12 max-w-2xl mx-auto">
-                    Subscribe to receive early access to new collections and a glimpse into the art of master jewelry crafting.</p>
-                <form class="flex flex-col md:flex-row gap-4 lg:gap-6 justify-center items-center max-w-lg mx-auto">
-                    <input class="input-minimal w-full font-body-md py-4 px-2 text-sm lg:text-base" placeholder="Your Email Address" required="" type="email" />
-                    <button class="bg-gold-accent text-white px-8 lg:px-12 py-4 lg:py-5 font-button text-xs lg:text-button uppercase tracking-widest hover:bg-charcoal transition-all duration-500 whitespace-nowrap shadow-xl transform active:scale-95 w-full md:w-auto" type="submit">Subscribe</button>
-                </form>
+        <!-- Search Results Grid Section -->
+        <section class="max-w-container-max mx-auto px-6 md:px-12 lg:px-margin-desktop">
+            <div id="search-results-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-gutter gap-y-16">
+                <!-- Javascript will render results here -->
+            </div>
+            
+            <!-- Custom Empty State -->
+            <div id="search-empty-state" class="hidden flex flex-col items-center justify-center text-center py-20 px-6">
+                <span class="material-symbols-outlined text-gold-accent text-5xl mb-6">search_off</span>
+                <h3 class="font-headline-md text-2xl text-primary mb-4">No Creations Found</h3>
+                <p class="text-on-surface-variant font-body-md text-sm max-w-sm mb-8">We couldn't find matches for that query. Try refining your spelling or searching for general categories like "diamonds" or "earrings".</p>
+                <button onclick="setQuery('')" class="border border-gold-accent text-gold-accent font-button text-xs uppercase tracking-widest px-8 py-3.5 hover:bg-gold-accent hover:text-white transition-all duration-300">
+                    Reset Catalog view
+                </button>
             </div>
         </section>
     </main>
@@ -455,8 +337,206 @@
         </div>
     </footer>
 
+    <!-- Search Catalog & Interactive logic -->
     <script>
-        // Simple scroll appearance for navbar
+        // Static product catalog representing all boutique products and collections
+        const productsDatabase = [
+            {
+                name: "Ethereal Diamond Ring",
+                price: 1200,
+                collection: "Rings",
+                category: "High Jewelry",
+                desc: "A stunning solitaire brilliant cut diamond set in a minimalist 18k white gold band.",
+                image: "images/ethereal-diamond-ring.jpg",
+                tags: ["diamond", "ring", "white gold", "solitaire", "engagement"]
+            },
+            {
+                name: "Sapphire Night Drops",
+                price: 2450,
+                collection: "Earrings",
+                category: "Evening Gala",
+                desc: "Gleaming deep blue oval sapphires surrounded by double micro-pave diamond halos.",
+                image: "images/sapphire-night-drops.jpg",
+                tags: ["sapphire", "earrings", "blue", "diamond", "gala", "drops"]
+            },
+            {
+                name: "Brilliant Studs",
+                price: 950,
+                collection: "Earrings",
+                category: "Essentials",
+                desc: "Classic four-prong round brilliant diamonds set in pure platinum backing.",
+                image: "images/brilliant-studs.jpg",
+                tags: ["diamond", "studs", "earrings", "platinum", "essential"]
+            },
+            {
+                name: "Celestial Choker",
+                price: 5800,
+                collection: "Necklaces",
+                category: "Heritage Collection",
+                desc: "A cascade of brilliant and marquise cut diamonds mirroring starlight on Old Bond Street.",
+                image: "images/celestial-choker.jpg",
+                tags: ["diamond", "necklace", "choker", "platinum", "heritage"]
+            },
+            {
+                name: "Lumière Cuff",
+                price: 5800,
+                collection: "Bracelets",
+                category: "Sculpted Forms",
+                desc: "An organic sculpted cuff in 18k yellow gold tracing flowing lines of absolute light.",
+                image: "images/lumiere-cuff.jpg",
+                tags: ["cuff", "bracelet", "yellow gold", "sculpted"]
+            },
+            {
+                name: "Nocturne Timepiece",
+                price: 12000,
+                collection: "Watches",
+                category: "Horology",
+                desc: "Self-winding fine chronometer featuring diamond bezels and hand-stitched leather strap.",
+                image: "images/nocturne-timepiece.jpg",
+                tags: ["watch", "timepiece", "chronometer", "horology", "leather"]
+            },
+            {
+                name: "Emerald Solace",
+                price: 2400,
+                collection: "Necklaces",
+                category: "Color Story",
+                desc: "A rich octagon-cut green emerald dropping gracefully from a delicate gold cable chain.",
+                image: "images/emerald-solace.jpg",
+                tags: ["emerald", "green", "necklace", "gold", "chain"]
+            },
+            {
+                name: "Aurelia Stackable Set",
+                price: 2100,
+                collection: "Rings",
+                category: "Modern Luxury",
+                desc: "A matching trio of stackable yellow gold bands dotted with brilliant micro-diamonds.",
+                image: "images/aurelia-stackable-set.jpg",
+                tags: ["rings", "stackable", "yellow gold", "set"]
+            },
+            {
+                name: "Royal Sapphire Drops",
+                price: 4800,
+                collection: "Earrings",
+                category: "High Jewelry",
+                desc: "Royal pear-cut sapphire drops highlighted by cushion-cut diamonds in white gold.",
+                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATJzMiwbENFUfaMx81Fd9Y0ZjokzH2eGIVRGECzbC7ROskCuCqaz9FGX3acp10OCir2BjZ0fjmvvW2PK2W52YvzkBVAxCFHGFFibcRJsFlpTraBCLzoO4iFP-QMgLUXhOc3OYDfHX526QrqB0wGtoDxRC5P3RDZyyC_ELbOjv-LTp1UDqyjWeogUDuQikKWGP6uuWh2409Nf4HOY1Mh0wqttcB1dA0vTopaHt7xlqk59Ei3UXHmk9N",
+                tags: ["sapphire", "earrings", "royal", "blue", "drops"]
+            }
+        ];
+
+        // Perform dynamic client side search
+        function performSearch() {
+            const input = document.getElementById('search-input');
+            const clearBtn = document.getElementById('search-clear-btn');
+            const grid = document.getElementById('search-results-grid');
+            const emptyState = document.getElementById('search-empty-state');
+            const resultInfo = document.getElementById('search-result-info');
+
+            const query = input.value.trim().toLowerCase();
+
+            // Toggle clear button visibility
+            if (query.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            // Filter products
+            const results = productsDatabase.filter(prod => {
+                if (!query) return true; // Show all if empty
+                return prod.name.toLowerCase().includes(query) ||
+                       prod.collection.toLowerCase().includes(query) ||
+                       prod.category.toLowerCase().includes(query) ||
+                       prod.desc.toLowerCase().includes(query) ||
+                       prod.tags.some(tag => tag.includes(query));
+            });
+
+            // Render catalog cards
+            grid.innerHTML = '';
+            
+            if (results.length === 0) {
+                grid.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                resultInfo.innerText = `0 Matches for "${input.value}"`;
+            } else {
+                grid.classList.remove('hidden');
+                emptyState.classList.add('hidden');
+                
+                if (query) {
+                    resultInfo.innerText = `${results.length} Matches Found for "${input.value}"`;
+                } else {
+                    resultInfo.innerText = 'All Products & Collections';
+                }
+
+                results.forEach(prod => {
+                    const card = document.createElement('div');
+                    card.className = "group flex flex-col items-center bg-white border border-gold-accent/5 p-4 md:p-6 shadow-sm hover:border-gold-accent/40 transition-colors duration-500";
+                    card.innerHTML = `
+                        <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
+                            <img alt="${prod.name}" class="w-full h-full object-cover transition-transform duration-[800ms] group-hover:scale-105" src="${prod.image}" />
+                            <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-4 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                                onclick="addToCart(this)">
+                                Add to Bag
+                            </button>
+                        </div>
+                        <div class="text-center w-full">
+                            <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">${prod.name}</h4>
+                            <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">${prod.category} | ${prod.collection}</p>
+                            <div class="flex justify-center items-center gap-1 mb-3">
+                                <span class="material-symbols-outlined text-[12px] text-gold-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px] text-gold-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px] text-gold-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px] text-gold-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-[12px] text-gold-accent" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                            <p class="font-headline-md text-gold-accent text-lg font-bold">$${prod.price.toLocaleString()}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+        }
+
+        // Set search input by tags
+        function setQuery(text) {
+            const input = document.getElementById('search-input');
+            input.value = text;
+            performSearch();
+        }
+
+        // Clear search input
+        function clearSearch() {
+            setQuery('');
+        }
+
+        // Simulated Add to Bag
+        let bagCountValue = 0;
+        function addToCart(btn) {
+            bagCountValue++;
+            const badge = document.getElementById('cart-count');
+            if (badge) badge.innerText = bagCountValue;
+
+            const originalText = btn.innerText;
+            btn.innerText = "Added to Bag";
+            btn.classList.replace('bg-gold-accent', 'bg-charcoal');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-charcoal', 'bg-gold-accent');
+            }, 1200);
+        }
+
+        // Load parameter searches
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                const input = document.getElementById('search-input');
+                input.value = query;
+            }
+            performSearch();
+        });
+
+        // Scroll Logic for Navbar
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
@@ -470,7 +550,7 @@
             }
         });
 
-        // Mobile menu toggle
+        // Mobile Menu toggle
         function toggleMenu() {
             const overlay = document.getElementById('mobile-menu-overlay');
             const panel = document.getElementById('mobile-menu');
@@ -489,23 +569,6 @@
                 panel.classList.remove('translate-x-0');
                 document.body.style.overflow = '';
             }
-        }
-
-        // Handle appointment form submission
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const overlay = document.getElementById('form-success-overlay');
-            overlay.classList.remove('opacity-0', 'pointer-events-none');
-            overlay.classList.add('opacity-100', 'pointer-events-auto');
-        }
-
-        // Reset the form after successful submission
-        function resetContactForm() {
-            const form = document.getElementById('contact-form');
-            const overlay = document.getElementById('form-success-overlay');
-            form.reset();
-            overlay.classList.add('opacity-0', 'pointer-events-none');
-            overlay.classList.remove('opacity-100', 'pointer-events-auto');
         }
     </script>
 </body>
