@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ethereal Diamond Ring | Lumière Jewelry</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#584400",
+                        "inverse-surface": "#303031",
+                        "on-surface-variant": "#444748",
+                        "tertiary-fixed-dim": "#c6c7c5",
+                        "tertiary-container": "#1a1c1b",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-container-high": "#e9e8e7",
+                        "secondary-container": "#fed255",
+                        "on-secondary-fixed": "#241a00",
+                        "error": "#ba1a1a",
+                        "secondary": "#755b00",
+                        "surface-bright": "#fbf9f9",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e3e2e2",
+                        "outline-variant": "#c4c7c7",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary-fixed-variant": "#474746",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-low": "#f5f3f3",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "outline": "#747878",
+                        "on-surface": "#1b1c1c",
+                        "primary-container": "#1c1b1b",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1b1c1c",
+                        "surface-tint": "#5f5e5e",
+                        "primary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ecc246",
+                        "surface-dim": "#dbdad9",
+                        "on-tertiary-fixed-variant": "#454746",
+                        "tertiary-fixed": "#e2e3e1",
+                        "surface": "#fbf9f9",
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "secondary-fixed": "#ffe08e",
+                        "tertiary": "#000000",
+                        "on-tertiary-container": "#838483",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e3e2e2",
+                        "on-secondary-container": "#735a00",
+                        "background": "#fbf9f9",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#efeded",
+                        "on-primary-container": "#858383"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Montserrat"],
+                        "button": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .nav-link-underline {
+            position: relative;
+        }
+
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #C9A227;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+
+        .glass-header {
+            background: rgba(251, 249, 249, 0.9);
+            backdrop-filter: blur(12px);
+        }
+
+        .shimmer-hover:hover {
+            filter: brightness(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md selection:bg-secondary/30">
+    <div class="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+        id="mobile-menu-overlay" onclick="toggleMenu()"></div>
+    <div class="fixed top-0 right-0 h-full w-[80%] max-sm:w-[85%] max-w-sm bg-white z-[70] translate-x-full transition-transform duration-500 ease-in-out flex flex-col p-8"
+        id="mobile-menu">
+        <div class="flex justify-between items-center mb-12">
+            <span class="font-display-lg text-2xl text-primary tracking-tighter uppercase">Lumière</span>
+            <button class="text-primary hover:text-gold-accent transition-colors" onclick="toggleMenu()">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-8">
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="index.html" onclick="toggleMenu()">Home</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="collection.html" onclick="toggleMenu()">Collections</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="about.html" onclick="toggleMenu()">About</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors" href="contact.html" onclick="toggleMenu()">Contact</a>
+        </nav>
+        <div class="mt-auto pt-12 border-t border-gold-accent/10">
+            <p class="font-label-caps text-[10px] text-on-surface-variant uppercase mb-4">The Lumière Experience</p>
+            <div class="flex gap-4">
+                <a class="text-gold-accent" href="index.html"><span class="material-symbols-outlined">favorite</span></a>
+                <a class="text-gold-accent" href="index.html"><span class="material-symbols-outlined">shopping_bag</span></a>
+            </div>
+        </div>
+    </div>
+    <header class="fixed top-0 w-full z-50 glass-header border-b border-gold-accent/20 shadow-sm transition-all duration-300">
+        <div class="flex justify-between items-center px-6 md:px-12 lg:px-margin-desktop py-4 lg:py-6 max-w-container-max mx-auto">
+            <div class="flex-1 flex gap-4 lg:gap-8 items-center">
+                <nav class="hidden md:flex gap-4 lg:gap-6">
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="index.html">Home</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="collection.html">Collections</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="about.html">About</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline" href="contact.html">Contact</a>
+                </nav>
+                <button class="md:hidden text-on-surface flex items-center" onclick="toggleMenu()">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <div class="flex-shrink-0 text-center">
+                <a class="font-display-lg text-2xl lg:text-headline-lg text-primary tracking-tighter uppercase" href="index.html">Lumière</a>
+            </div>
+            <div class="flex-1 flex justify-end items-center gap-4 lg:gap-6">
+                <button class="text-on-surface hover:text-gold-accent transition-all duration-300">
+                    <span class="material-symbols-outlined font-bold">search</span>
+                </button>
+                <a class="hidden sm:block text-on-surface hover:text-gold-accent transition-all duration-300 relative" href="index.html">
+                    <span class="material-symbols-outlined font-bold">favorite</span>
+                </a>
+                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 relative" href="index.html">
+                    <span class="material-symbols-outlined font-bold">shopping_bag</span>
+                    <span class="absolute -top-2 -right-2 bg-gold-accent text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="pt-28 md:pt-32 lg:pt-36 pb-20">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center space-x-2 py-8 font-label-caps text-label-caps text-on-surface-variant">
+                <a class="hover:text-primary" href="index.html">Home</a>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+                <a class="hover:text-primary" href="collection.html">Collections</a>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+                <span class="text-on-surface">Ethereal Diamond Ring</span>
+            </nav>
+            <!-- Product Hero -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <!-- Gallery Column -->
+                <div class="space-y-gutter">
+                    <div class="aspect-[4/5] md:aspect-[3/4] lg:aspect-[5/6] bg-surface-container overflow-hidden rounded-sm max-w-[420px] lg:max-w-[520px] mx-auto">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A macro studio photograph of the Ethereal Diamond Ring"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOzh6NMfkCGYs1NCTCy3g0SARjbWQf1Wudi2Ivh86UJe2dpZCVntA_IJ3k8ZT4-I2W749jXgNYYwJXlLMYvJUD-aZdPtOH0gbanCORqockwnLNV1457XmMHazHHxK-1jCOLXYcc7JvLP7zpVeVXaL7mg1AANwhnSN28tp1n_ortxTT9wsB8Jr5reRIrUphLHdQAUxA0HqYxoILito6htO2oKVmstHWcxXXHd0cwWqHY9ecbX1gEKpC" />
+                    </div>
+                    <div class="grid grid-cols-4 gap-3 md:gap-4">
+                        <div class="aspect-square bg-surface-container cursor-pointer border-2 border-secondary overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                            <img class="w-full h-full object-cover" data-alt="Close-up view of ring band"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKqtbuTvD7jnGfNV0Lrv6cXazp8-rHrxtalevM68bN6dwK00BUne0LmoNfsDu4ssySzSv9R1f9N8YhkME9t2izUrNfhVBTupUw7uDps0Tbva1RvqfQ8Da8OJc7RMBxqkMSz8ETZ0bISSd0NcvFr1rp5-bsS09EPsDiqMEhrn5xT2AHIEsNPPeyIPSSfedmNxFqq9fCYNbLHPFG1WyrQOCCIL0aQhOtUspjdw_4xmNMR_PNxNKo0eQV" />
+                        </div>
+                        <div class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                            <img class="w-full h-full object-cover" data-alt="Lifestyle shot of ring"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt2BbqHSVZWMH0gkMTTZy5PMr3a6mAduldQ-xm1X2AvTKmqS0FLHj85E5kLgEtn1Sd6NxI-wMA9UICJo5vcSawApoFC3g-2DUYKRBtDAj2F3vFa_fTCfM1iYMRwCb2dzgrWT674pYN0ylpouigD07E5iAuyCPEjD-xTT2wOswvkPz8Pahh9jOR5AQyZ-WBR2p9KTMAIzXK9ejdG1DYuBKdUWRdO0KGoT8nJ9NGkDS-m90uUOnWq6eQ" />
+                        </div>
+                        <div class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                            <img class="w-full h-full object-cover" data-alt="Presentation box view"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuASr0lmdrzwvHY5LB-d5qPYTzKdXkb9MrgtZg9kDJkZ78h2q2rqZUHSrUHTo-12h1cOb5bQaPMIsASrYizX2CkBlRO-Gyi9P1_jtSRLDLJwsQujEKhWorCnHe86djRSi3BR7JByA-d6HqqkzedlsCABrPVwAZUubxkm6KeHXI6hKGli2MrcxUBwd0NPNyfOiInLCW-IZfxKi-hLKP4hVFoZXvN5lxv2tTTGAhVa-rHjDngVq89XBRE5" />
+                        </div>
+                        <div class="aspect-square bg-surface-container cursor-pointer border border-outline-variant hover:border-secondary transition-colors overflow-hidden w-full max-w-[84px] md:max-w-[110px] lg:max-w-[124px] mx-auto">
+                            <img class="w-full h-full object-cover" data-alt="Professional jewelry render"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTooOPoRZWMDgnzFRZWhd3rtvVJhujlmK0FnkCCKv1pVzxCcJ_capBOZIcdEBN0a4Wpkp1zc_-uPCGPErBLij00mPJDAtqJ53hBiKy_PU-SLxIlRuWsi13oDRzPPo_24l6VT_p5Sc3OeR8UHWKwCWwXjH9MYzxlS_urnmms1H6cnqHWSgcpEkFSfTVYrjzcy_FfV9oZs4LNZfBCn3h3FB-dJyEJaOwQpz-yrFvdTn43Yx64CDS2MI2" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Details Column -->
+                <div class="flex flex-col h-full">
+                    <h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Ethereal Diamond Ring</h1>
+                    <p class="font-headline-md text-headline-md text-secondary mb-8">$1,200</p>
+                    <div class="space-y-6 mb-12">
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            A testament to timeless elegance, the Ethereal Diamond Ring features a 2-carat brilliant-cut
+                            center stone of exceptional clarity. Each piece is meticulously set by hand into a bespoke,
+                            hand-carved platinum band, designed to maximize light reflection and brilliance.
+                        </p>
+                        <div class="border-t border-outline-variant pt-8">
+                            <label class="font-label-caps text-label-caps block mb-4">Select Ring Size (US)</label>
+                            <div class="grid grid-cols-5 gap-2">
+                                <button
+                                    class="h-12 border border-outline-variant hover:border-secondary font-label-caps flex items-center justify-center transition-colors">5</button>
+                                <button
+                                    class="h-12 border-2 border-secondary bg-secondary/5 text-secondary font-label-caps flex items-center justify-center transition-colors">6</button>
+                                <button
+                                    class="h-12 border border-outline-variant hover:border-secondary font-label-caps flex items-center justify-center transition-colors">7</button>
+                                <button
+                                    class="h-12 border border-outline-variant hover:border-secondary font-label-caps flex items-center justify-center transition-colors">8</button>
+                                <button
+                                    class="h-12 border border-outline-variant hover:border-secondary font-label-caps flex items-center justify-center transition-colors">9</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <button
+                            class="w-full bg-primary text-on-primary py-5 font-button uppercase tracking-widest active:scale-[0.98] transition-all hover:bg-neutral-800">
+                            Add to Bag
+                        </button>
+                        <button
+                            class="w-full border border-primary text-primary py-5 font-button uppercase tracking-widest active:scale-[0.98] transition-all hover:bg-primary/5">
+                            Bespoke Inquiry
+                        </button>
+                    </div>
+                    <div
+                        class="mt-12 pt-12 border-t border-outline-variant flex items-center space-x-8 text-on-surface-variant">
+                        <div class="flex items-center space-x-2">
+                            <span class="material-symbols-outlined text-secondary">verified</span>
+                            <span class="font-label-caps text-[10px]">Lifetime Warranty</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="material-symbols-outlined text-secondary">local_shipping</span>
+                            <span class="font-label-caps text-[10px]">Insured Shipping</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="material-symbols-outlined text-secondary">workspace_premium</span>
+                            <span class="font-label-caps text-[10px]">GIA Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Recommended Carousel -->
+            <section class="mt-section-gap">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface">Recommended for You</h2>
+                        <p class="font-body-md text-on-surface-variant mt-2">Curated pieces to complement your
+                            selection.</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button
+                            class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:border-secondary text-on-surface-variant hover:text-secondary transition-all">
+                            <span class="material-symbols-outlined">west</span>
+                        </button>
+                        <button
+                            class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:border-secondary text-on-surface-variant hover:text-secondary transition-all">
+                            <span class="material-symbols-outlined">east</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Item 1 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida/AP1WRLf8zLvUuxkISU3nanwUx7oEv9sFIDrUooJueHLoOvpKppoIlcHa97Y7GnMkBb1dAZ2d_owLyDszBCFJjNh1-WvTSVXGgJO-1RHPAZ6dsUnc30OLJbBwI76mxqjumogNynb7OXHa-4sNV2-b7QV6X7_o98wjKegi6VVFXZxbm2ZB7qZkD6hKX0OIJP0_r2a6OT0bt9Yx8Ff224BrKTGNLZH6oS2dS29Do_zmuwr2ia9rG9KiDUOIdgb9pk" />
+                            <button
+                                class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
+                            </button>
+                        </div>
+                        <h3
+                            class="font-headline-md text-headline-md text-on-surface text-center group-hover:text-secondary transition-colors">
+                            Diamond Studs</h3>
+                        <p class="font-label-caps text-center text-on-surface-variant mt-2">$850</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                src="https://lh3.googleusercontent.com/aida/AP1WRLukwhgnDDjUcNKgDmNM-BQ6kf7roX3GTm-HBKXqT8PiuwAc8kFxGaPfZ9pHVsJFzw_-LSi6lIo2rY-3S8GA5MhLu9X2rqHHVgwvmuotW3ug082BzOTTUTjBHbnp1nkErnYcOnFIdmynS4yTpoqQFffCD_qCMd3LfiS_1wmftGGqjeG0giWZU9Al-sacwokLJQLXnk4-WELdgdK4w2snAcO2Bz30S_YUpT7LwIIFF2CleBciruYbqacEPyE" />
+                            <button
+                                class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
+                            </button>
+                        </div>
+                        <h3
+                            class="font-headline-md text-headline-md text-on-surface text-center group-hover:text-secondary transition-colors">
+                            Sapphire Drop Earrings</h3>
+                        <p class="font-label-caps text-center text-on-surface-variant mt-2">$1,400</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="Macro product shot of a delicate platinum necklace"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YRX_lkUFzh45rwTqRyOBuKKx_x7zmDplnilfu0MQBIhCeFkyuiNNRtvB9rdVB00liDbbVPdKBlXoen6NNT3GMP6_cVCjl7fPqkLiesF4x-9wStcqT0aTlVSuVM-Kd1kk-TixLBOqetmFnoQarFqdJdzdKh8fmfCld6tOoeVYaShpdApgzAIXeWZlurdwc_YrYFEs9JgniPIFilMVwvLNtPdT4UQl_ZFJSfr3L4EW_iAvkbDGGYt7" />
+                            <button
+                                class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
+                            </button>
+                        </div>
+                        <h3
+                            class="font-headline-md text-headline-md text-on-surface text-center group-hover:text-secondary transition-colors">
+                            Celestial Pendant</h3>
+                        <p class="font-label-caps text-center text-on-surface-variant mt-2">$920</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest py-16 lg:py-section-gap px-6 md:px-12 lg:px-margin-desktop border-t-4 border-gold-accent">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-gutter">
+            <div class="col-span-1">
+                <span class="font-display-lg text-2xl lg:text-headline-md text-gold-accent uppercase block mb-6 lg:mb-8">Lumière</span>
+                <p class="text-on-surface-variant font-body-md text-xs lg:text-sm mb-6 lg:mb-8 leading-relaxed">Crafting light into timeless elegance since 1924. Our heritage is rooted in the pursuit of absolute brilliance.</p>
+                <div class="flex gap-4">
+                    <a class="text-gold-accent hover:text-charcoal transition-all" href="index.html">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+                    </a>
+                    <a class="text-gold-accent hover:text-charcoal transition-all" href="index.html">
+                        <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Collections</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Engagement Rings</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Fine Jewelry</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="contact.html">Bespoke Service</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Support</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Shipping &amp; Returns</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Size Guide</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Product Care</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Company</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Sustainability</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Privacy Policy</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Terms of Service</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Boutique Locator</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto mt-12 lg:mt-24 pt-8 border-t border-gold-accent/20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-on-surface-variant font-body-md text-[10px] lg:text-xs text-center md:text-left">© 2024 Lumière Jewelry. All rights reserved. <span class="text-gold-accent ml-2">Mastercrafted Heritage.</span></p>
+            <div class="flex gap-6 opacity-80">
+                <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">payments</span>
+                <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">credit_card</span>
+                <span class="material-symbols-outlined text-xl lg:text-2xl text-gold-accent">account_balance_wallet</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const panel = document.getElementById('mobile-menu');
+            const isOpening = panel.classList.contains('translate-x-full');
+
+            if (isOpening) {
+                overlay.classList.remove('pointer-events-none', 'opacity-0');
+                overlay.classList.add('opacity-100', 'pointer-events-auto');
+                panel.classList.remove('translate-x-full');
+                panel.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+                panel.classList.add('translate-x-full');
+                panel.classList.remove('translate-x-0');
+                document.body.style.overflow = '';
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-white');
+                header.classList.remove('py-4', 'lg:py-6');
+            } else {
+                header.classList.add('py-4', 'lg:py-6');
+                header.classList.remove('py-2', 'bg-white');
+            }
+        });
+    </script>
+</body>
+
+</html>
