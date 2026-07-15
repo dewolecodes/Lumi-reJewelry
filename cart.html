@@ -227,7 +227,7 @@
     </header>
 
     <!-- Main Content Container -->
-    <main class="pt-24 lg:pt-32 pb-24 px-6 md:px-12 lg:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+    <main class="pt-36 lg:pt-44 pb-24 px-6 md:px-12 lg:px-margin-desktop max-w-container-max mx-auto min-h-screen">
         
         <!-- Dynamic Cart Tab Navigation & Actions -->
         <div class="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-6 border-b border-gold-accent/20 pb-4 mb-12">
@@ -334,42 +334,79 @@
             </div>
 
             <!-- Order Summary Card -->
-            <div id="cart-summary-card" class="lg:col-span-4 bg-white p-8 md:p-10 border border-gold-accent/15 subtle-shadow flex flex-col gap-8 sticky top-32">
-                <h2 class="font-headline-md text-xl lg:text-2xl text-primary border-b border-gold-accent/10 pb-4">Order Summary</h2>
-                <div class="flex flex-col gap-4">
-                    <div class="flex justify-between items-center text-sm">
+            <div id="cart-summary-card" class="lg:col-span-4 bg-white border border-gold-accent/15 p-8 md:p-10 subtle-shadow flex flex-col gap-8 sticky top-32">
+                <div class="border-b border-gold-accent/10 pb-6">
+                    <span class="font-label-caps text-[10px] text-gold-accent tracking-widest uppercase mb-1 block font-bold">Your Order</span>
+                    <h2 class="font-display-lg text-2xl lg:text-3xl text-primary tracking-wide">Summary</h2>
+                </div>
+                
+                <!-- Prices Breakdown -->
+                <div class="flex flex-col gap-5 text-sm">
+                    <div class="flex justify-between items-center">
                         <span class="font-label-caps text-[10px] tracking-widest text-outline uppercase">Subtotal</span>
                         <span class="font-body-md text-primary font-medium" id="cart-subtotal">$10,650.00</span>
                     </div>
-                    <div class="flex justify-between items-center text-sm">
+                    <div class="flex justify-between items-center">
                         <span class="font-label-caps text-[10px] tracking-widest text-outline uppercase">Shipping</span>
-                        <span class="font-body-md text-gold-accent italic">Complimentary</span>
+                        <div class="text-right">
+                            <span class="font-body-md text-gold-accent font-medium">Complimentary</span>
+                            <span class="text-[9px] text-outline block uppercase tracking-wider">Insured Express</span>
+                        </div>
                     </div>
-                    <div class="flex justify-between items-center text-sm">
+                    <div class="flex justify-between items-center">
                         <span class="font-label-caps text-[10px] tracking-widest text-outline uppercase">Taxes</span>
                         <span class="font-body-md text-outline">Calculated at checkout</span>
                     </div>
                 </div>
-                <div class="h-px bg-gold-accent/10 w-full"></div>
-                <div class="flex justify-between items-end">
-                    <span class="font-label-caps text-xs text-primary font-bold tracking-widest">Estimated Total</span>
-                    <span class="font-headline-md text-2xl lg:text-3xl text-primary" id="cart-total">$10,650.00</span>
+
+                <!-- Privilege Code Accordion / Input -->
+                <div class="border-t border-b border-gold-accent/10 py-6">
+                    <details class="group cursor-pointer">
+                        <summary class="flex justify-between items-center font-label-caps text-[10px] tracking-widest text-primary uppercase select-none list-none">
+                            <span>Have a Privilege Code?</span>
+                            <span class="material-symbols-outlined text-gold-accent text-base transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="flex gap-3 mt-4 pt-2">
+                            <input type="text" placeholder="ENTER CODE" class="input-minimal w-full font-body-md py-2 px-1 text-xs uppercase tracking-widest placeholder:text-outline/40 text-primary focus:ring-0 focus:border-primary" />
+                            <button type="button" class="border border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-white px-4 py-2 font-button text-[10px] tracking-widest uppercase transition-colors">
+                                Apply
+                            </button>
+                        </div>
+                    </details>
                 </div>
+
+                <!-- Total Section with Spacing to Prevent Overlaps -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2 pt-2">
+                    <span class="font-label-caps text-xs text-primary font-bold tracking-widest uppercase">Estimated Total</span>
+                    <span class="font-headline-md text-2xl lg:text-3xl text-gold-accent font-semibold tracking-tight" id="cart-total">$10,650.00</span>
+                </div>
+
+                <!-- Action Button & Trust -->
                 <div class="flex flex-col gap-4">
-                    <button class="w-full bg-primary text-white py-4 font-button text-xs uppercase tracking-[0.2em] hover:bg-gold-accent transition-all duration-500 shadow-md">
+                    <button class="w-full bg-charcoal text-white border border-charcoal py-4 font-button text-xs uppercase tracking-[0.25em] hover:bg-gold-accent hover:border-gold-accent transition-all duration-500 shadow-md transform active:scale-[0.98] text-center">
                         Proceed to Checkout
                     </button>
-                    <div class="flex items-center gap-3 justify-center py-2 text-outline">
-                        <span class="material-symbols-outlined text-[16px]">lock</span>
-                        <span class="font-label-caps text-[9px] tracking-widest uppercase">Secure checkout</span>
+                    <div class="flex items-center gap-2 justify-center py-2 text-outline text-[10px]">
+                        <span class="material-symbols-outlined text-[16px] text-gold-accent font-bold">lock</span>
+                        <span class="font-label-caps tracking-widest uppercase">Secure SSL Checkout</span>
                     </div>
                 </div>
-                <div class="flex flex-col gap-3">
-                    <p class="font-label-caps text-[8px] text-outline uppercase tracking-[0.2em] text-center opacity-70">Accepted Payments</p>
-                    <div class="flex justify-center gap-6 text-gold-accent opacity-70">
-                        <span class="material-symbols-outlined text-2xl">credit_card</span>
-                        <span class="material-symbols-outlined text-2xl">payments</span>
-                        <span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+
+                <!-- Lumiere Boutique Guarantees -->
+                <div class="bg-surface-container-low p-5 border border-gold-accent/5 flex flex-col gap-4 text-xs">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-gold-accent text-lg">redeem</span>
+                        <div>
+                            <h5 class="font-label-caps text-[9px] text-primary tracking-wider uppercase font-bold mb-0.5">Signature Packaging</h5>
+                            <p class="text-on-surface-variant text-[11px] leading-relaxed">Delivered in our bespoke Lumière lacquer box, wrapped with fine silk ribbon.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-gold-accent text-lg">local_shipping</span>
+                        <div>
+                            <h5 class="font-label-caps text-[9px] text-primary tracking-wider uppercase font-bold mb-0.5">Insured Boutique Shipping</h5>
+                            <p class="text-on-surface-variant text-[11px] leading-relaxed">Complimentary and fully insured transit, requiring secure physical signature.</p>
+                        </div>
                     </div>
                 </div>
             </div>
