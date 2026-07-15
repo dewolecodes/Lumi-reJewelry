@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Bag | Lumière Jewelry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#454746",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#5f5e5e",
+                        "surface-dim": "#dbdad9",
+                        "on-primary-container": "#858383",
+                        "surface-container-highest": "#e3e2e2",
+                        "surface-bright": "#fbf9f9",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf9f9",
+                        "primary-fixed": "#e5e2e1",
+                        "on-surface-variant": "#444748",
+                        "tertiary-fixed-dim": "#c6c7c5",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#1c1b1b",
+                        "on-secondary-fixed": "#241a00",
+                        "on-secondary-container": "#735a00",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-variant": "#e3e2e2",
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-fixed": "#e2e3e1",
+                        "secondary-fixed": "#ffe08e",
+                        "outline-variant": "#c4c7c7",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-low": "#f5f3f3",
+                        "outline": "#747878",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#584400",
+                        "secondary-fixed-dim": "#ecc246",
+                        "on-tertiary-container": "#838483",
+                        "tertiary-container": "#1a1c1b",
+                        "surface-container": "#efeded",
+                        "secondary": "#755b00",
+                        "error-container": "#ffdad6",
+                        "surface": "#fbf9f9",
+                        "secondary-container": "#fed255",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "primary": "#000000",
+                        "inverse-surface": "#303031",
+                        "brand-gold": "#C9A227"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "button": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-underline-hover:hover {
+            border-bottom: 1px solid #C9A227;
+        }
+        .subtle-shadow {
+            box-shadow: 0 4px 20px rgba(26, 26, 26, 0.04);
+        }
+        .item-row {
+            transition: background-color 0.3s ease;
+        }
+        .item-row:hover {
+            background-color: #F9F9F7;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-brand-gold/20">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<div class="md:hidden">
+<span class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Collections</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary-fixed-dim transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2">
+<span class="font-display-lg-mobile text-display-lg-mobile uppercase tracking-widest text-primary">Lumière</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:block relative">
+<span class="material-symbols-outlined absolute left-2 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-1 bg-transparent border-b border-primary focus:outline-none font-label-caps text-label-caps w-40 transition-all focus:w-60" placeholder="SEARCH" type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform" data-icon="favorite">favorite</span>
+<div class="relative cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-brand-gold text-white text-[8px] px-1 rounded-full font-bold">2</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+<div class="flex flex-col gap-4 mb-12">
+<h1 class="font-headline-lg text-headline-lg text-primary">Shopping Bag</h1>
+<a class="font-label-caps text-label-caps text-outline hover:text-primary flex items-center gap-2 group transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                CONTINUE SHOPPING
+            </a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Items List -->
+<div class="lg:col-span-8 flex flex-col">
+<!-- Header Labels -->
+<div class="hidden md:grid grid-cols-12 pb-4 border-b border-outline-variant px-4">
+<div class="col-span-6 font-label-caps text-label-caps text-outline">PRODUCT</div>
+<div class="col-span-3 text-center font-label-caps text-label-caps text-outline">QUANTITY</div>
+<div class="col-span-3 text-right font-label-caps text-label-caps text-outline">TOTAL</div>
+</div>
+<!-- Item 1 -->
+<div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-outline-variant px-4 item-row">
+<div class="col-span-12 md:col-span-6 flex gap-6 items-center">
+<div class="w-32 h-40 bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover mix-blend-multiply" data-alt="A macro studio photograph of an Ethereal Diamond Ring from Lumière Jewelry. The central oval-cut diamond is surrounded by a sparkling halo of smaller round diamonds set in highly polished white gold. The lighting is soft and high-key, creating a clean luxury boutique aesthetic with subtle reflections on the metal's surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPp4uAmKXUodJTZe5eatnhNXSyFchkKz5_RefSiX33jLDaFvw6pnCNvQJoU4LxRCYSmp5n-6oiDxLSd15aVi6AVRGWIak68JqCstaVq3tLIj9xNye6eYdTg0xqdbBBBWgMi8hYIN20eXiQu1g2b_jiL95ZCBjuj0tHTbqeFSJMm20_JLH85dWaVb_Ahe9WQDTItkagYXQeCHmpIusfwIWMdVGV3jwaqlIq0rp6LhyHogqGQZur5Vhg"/>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-primary">Ethereal Diamond Ring</h3>
+<p class="font-label-caps text-label-caps text-outline">WHITE GOLD / 1.5 CT OVAL</p>
+<p class="font-body-md text-body-md text-primary mt-2">$8,450.00</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
+<div class="flex items-center border border-outline-variant px-4 py-2 gap-6">
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">remove</button>
+<span class="font-body-md text-body-md">1</span>
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">add</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-3 text-right flex flex-col md:flex-row md:justify-end items-center gap-4 mt-6 md:mt-0">
+<span class="font-body-lg text-body-lg text-primary">$8,450.00</span>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors p-2">close</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-outline-variant px-4 item-row">
+<div class="col-span-12 md:col-span-6 flex gap-6 items-center">
+<div class="w-32 h-40 bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover mix-blend-multiply" data-alt="Close up photography of Lumière Brilliant Stud earrings featuring two perfectly cut round diamonds. The earrings are set in minimalist four-prong platinum settings, presented against a soft grey textured fabric background that evokes a sense of high-end elegance. Bright, diffused lighting highlights the internal brilliance and fire of the gemstones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24kzcmSpDUiuwzFDBirothUgQDC1R0_8lQpm2y_d0s6kJZjXF2lDVrfOUS4FmRReondjTZhVD8ZDqT8ZkzEdz4HbGSICLOdhn6sFDur2Ku7UsfHaHc88FcDKUvAsY9q9JRZnDgSjWeB_Yz04U5en2HNeeXAquh88dzev_i7Pt5EWSczeo5Lx1ODtVkur2SU0O7t198gLcrl2ZneFYgQuclaoIQA0AqC0bvjGsZx3tBNoc2IjgyZGL"/>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-primary">Brilliant Studs</h3>
+<p class="font-label-caps text-label-caps text-outline">PLATINUM / 0.5 CT PAIR</p>
+<p class="font-body-md text-body-md text-primary mt-2">$2,200.00</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
+<div class="flex items-center border border-outline-variant px-4 py-2 gap-6">
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">remove</button>
+<span class="font-body-md text-body-md">1</span>
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors text-sm">add</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-3 text-right flex flex-col md:flex-row md:justify-end items-center gap-4 mt-6 md:mt-0">
+<span class="font-body-lg text-body-lg text-primary">$2,200.00</span>
+<button class="material-symbols-outlined text-outline hover:text-error transition-colors p-2">close</button>
+</div>
+</div>
+</div>
+<!-- Order Summary -->
+<div class="lg:col-span-4 bg-surface-container-low p-8 subtle-shadow flex flex-col gap-8 sticky top-32">
+<h2 class="font-headline-md text-headline-md text-primary">Order Summary</h2>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-outline">SUBTOTAL</span>
+<span class="font-body-lg text-body-lg text-primary">$10,650.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-outline">SHIPPING</span>
+<span class="font-body-md text-body-md text-brand-gold italic">Complimentary</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-outline">TAXES</span>
+<span class="font-body-md text-body-md text-primary">Calculated at checkout</span>
+</div>
+</div>
+<div class="h-px bg-outline-variant w-full"></div>
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-primary font-bold">ESTIMATED TOTAL</span>
+<span class="font-display-lg-mobile text-[28px] text-primary">$10,650.00</span>
+</div>
+<div class="flex flex-col gap-4">
+<button class="w-full bg-primary text-white py-4 font-button text-button uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                        Proceed to Checkout
+                    </button>
+<div class="flex items-center gap-4 justify-center py-2">
+<span class="material-symbols-outlined text-[18px] text-outline">lock</span>
+<span class="font-label-caps text-label-caps text-outline">SECURE CHECKOUT</span>
+</div>
+</div>
+<div class="flex flex-col gap-3 mt-4">
+<p class="font-label-caps text-[10px] text-outline uppercase tracking-wider text-center">Payment Methods</p>
+<div class="flex justify-center gap-4 opacity-50">
+<span class="material-symbols-outlined text-2xl">credit_card</span>
+<span class="material-symbols-outlined text-2xl">account_balance</span>
+<span class="material-symbols-outlined text-2xl">payments</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Suggestions -->
+<section class="mt-section-gap">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-outline-variant pb-4">Complete the Look</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Featured Suggestion -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A luxury jewelry product shot of sapphire and diamond drop earrings by Lumière. The earrings feature a delicate silver filigree top and a large pear-shaped deep blue sapphire hanging elegantly. Photographed on a clean white background with minimal soft shadows to emphasize their exquisite craftsmanship and sophisticated color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATJzMiwbENFUfaMx81Fd9Y0ZjokzH2eGIVRGECzbC7ROskCuCqaz9FGX3acp10OCir2BjZ0fjmvvW2PK2W52YvzkBVAxCFHGFFibcRJsFlpTraBCLzoO4iFP-QMgLUXhOc3OYDfHX526QrqB0wGtoDxRC5P3RDZyyC_ELbOjv-LTp1UDqyjWeogUDuQikKWGP6uuWh2409Nf4HOY1Mh0wqttcB1dA0vTopaHt7xlqk59Ei3UXHmk9N"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-label-caps text-label-caps text-primary">Royal Sapphire Drops</h4>
+<p class="font-body-md text-body-md text-outline">$4,800.00</p>
+</div>
+<span class="material-symbols-outlined text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity">add_shopping_cart</span>
+</div>
+</div>
+<!-- Repeat logic for more placeholders if desired -->
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto gap-12">
+<div class="flex flex-col gap-6">
+<span class="font-headline-sm text-headline-sm text-primary uppercase tracking-[0.2em]">Lumière</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Crafting timeless elegance since 1926. Every piece tells a story of light and luxury.</p>
+<div class="flex gap-6 mt-2">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-brand-gold transition-colors">public</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-brand-gold transition-colors">share</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-brand-gold transition-colors">mail</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-primary border-b border-brand-gold/30 pb-2">Client Services</h5>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Book an Appointment</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-primary border-b border-brand-gold/30 pb-2">Legal</h5>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="flex flex-col gap-6 w-full md:w-80">
+<h5 class="font-label-caps text-label-caps text-primary">Newsletter</h5>
+<div class="relative border-b border-primary">
+<input class="w-full bg-transparent py-2 focus:outline-none font-label-caps text-label-caps" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 bottom-2 font-label-caps text-label-caps text-brand-gold hover:text-primary transition-colors">JOIN</button>
+</div>
+<p class="font-body-md text-[12px] text-outline italic">Experience exclusivity redefined in your inbox.</p>
+</div>
+</div>
+<div class="border-t border-outline-variant px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-md text-body-md text-on-surface-variant text-[12px]">© 2026 Lumière Jewelry. All rights reserved.</span>
+<div class="flex gap-8">
+<span class="font-label-caps text-label-caps text-outline hover:text-primary cursor-pointer">PARIS</span>
+<span class="font-label-caps text-label-caps text-outline hover:text-primary cursor-pointer">LONDON</span>
+<span class="font-label-caps text-label-caps text-outline hover:text-primary cursor-pointer">NEW YORK</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for quantity selectors
+        document.querySelectorAll('button.material-symbols-outlined').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const isAdd = this.innerText === 'add';
+                const isRemove = this.innerText === 'remove';
+                if (isAdd || isRemove) {
+                    const counter = this.parentElement.querySelector('span');
+                    let val = parseInt(counter.innerText);
+                    if (isAdd) val++;
+                    if (isRemove && val > 1) val--;
+                    counter.innerText = val;
+                    
+                    // Trigger a "thinking" pulse on the button
+                    this.style.transform = 'scale(0.8)';
+                    setTimeout(() => this.style.transform = 'scale(1)', 100);
+                }
+            });
+        });
+
+        // Sticky Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('subtle-shadow');
+                header.classList.remove('bg-background/80');
+                header.classList.add('bg-background');
+            } else {
+                header.classList.remove('subtle-shadow');
+                header.classList.add('bg-background/80');
+                header.classList.remove('bg-background');
+            }
+        });
+    </script>
+</body></html>
