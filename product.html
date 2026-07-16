@@ -281,8 +281,12 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <button
-                            class="w-full bg-primary text-on-primary py-5 font-button uppercase tracking-widest active:scale-[0.98] transition-all hover:bg-neutral-800">
+                        <button id="product-detail-add-to-bag"
+                            class="w-full bg-primary text-on-primary py-5 font-button uppercase tracking-widest active:scale-[0.98] transition-all hover:bg-neutral-800"
+                            data-product-name="Ethereal Diamond Ring"
+                            data-product-price="1200"
+                            data-product-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCOzh6NMfkCGYs1NCTCy3g0SARjbWQf1Wudi2Ivh86UJe2dpZCVntA_IJ3k8ZT4-I2W749jXgNYYwJXlLMYvJUD-aZdPtOH0gbanCORqockwnLNV1457XmMHazHHxK-1jCOLXYcc7JvLP7zpVeVXaL7mg1AANwhnSN28tp1n_ortxTT9wsB8Jr5reRIrUphLHdQAUxA0HqYxoILito6htO2oKVmstHWcxXXHd0cwWqHY9ecbX1gEKpC"
+                            data-product-category="High Jewelry">
                             Add to Bag
                         </button>
                         <button
@@ -333,8 +337,12 @@
                             class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 src="https://lh3.googleusercontent.com/aida/AP1WRLf8zLvUuxkISU3nanwUx7oEv9sFIDrUooJueHLoOvpKppoIlcHa97Y7GnMkBb1dAZ2d_owLyDszBCFJjNh1-WvTSVXGgJO-1RHPAZ6dsUnc30OLJbBwI76mxqjumogNynb7OXHa-4sNV2-b7QV6X7_o98wjKegi6VVFXZxbm2ZB7qZkD6hKX0OIJP0_r2a6OT0bt9Yx8Ff224BrKTGNLZH6oS2dS29Do_zmuwr2ia9rG9KiDUOIdgb9pk" />
-                            <button
-                                class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity wish-toggle-btn"
+                                data-product-name="Diamond Studs"
+                                data-product-price="850"
+                                data-product-image="https://lh3.googleusercontent.com/aida/AP1WRLf8zLvUuxkISU3nanwUx7oEv9sFIDrUooJueHLoOvpKppoIlcHa97Y7GnMkBb1dAZ2d_owLyDszBCFJjNh1-WvTSVXGgJO-1RHPAZ6dsUnc30OLJbBwI76mxqjumogNynb7OXHa-4sNV2-b7QV6X7_o98wjKegi6VVFXZxbm2ZB7qZkD6hKX0OIJP0_r2a6OT0bt9Yx8Ff224BrKTGNLZH6oS2dS29Do_zmuwr2ia9rG9KiDUOIdgb9pk"
+                                data-product-category="Essentials"
+                                onclick="handleWishlistToggle(this)">
                                 <span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
                             </button>
                         </div>
@@ -349,8 +357,12 @@
                             class="aspect-[4/5] sm:aspect-square bg-surface-container overflow-hidden relative mb-6 max-w-[280px] mx-auto">
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 src="https://lh3.googleusercontent.com/aida/AP1WRLukwhgnDDjUcNKgDmNM-BQ6kf7roX3GTm-HBKXqT8PiuwAc8kFxGaPfZ9pHVsJFzw_-LSi6lIo2rY-3S8GA5MhLu9X2rqHHVgwvmuotW3ug082BzOTTUTjBHbnp1nkErnYcOnFIdmynS4yTpoqQFffCD_qCMd3LfiS_1wmftGGqjeG0giWZU9Al-sacwokLJQLXnk4-WELdgdK4w2snAcO2Bz30S_YUpT7LwIIFF2CleBciruYbqacEPyE" />
-                            <button
-                                class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity wish-toggle-btn"
+                                data-product-name="Sapphire Drop Earrings"
+                                data-product-price="1400"
+                                data-product-image="https://lh3.googleusercontent.com/aida/AP1WRLukwhgnDDjUcNKgDmNM-BQ6kf7roX3GTm-HBKXqT8PiuwAc8kFxGaPfZ9pHVsJFzw_-LSi6lIo2rY-3S8GA5MhLu9X2rqHHVgwvmuotW3ug082BzOTTUTjBHbnp1nkErnYcOnFIdmynS4yTpoqQFffCD_qCMd3LfiS_1wmftGGqjeG0giWZU9Al-sacwokLJQLXnk4-WELdgdK4w2snAcO2Bz30S_YUpT7LwIIFF2CleBciruYbqacEPyE"
+                                data-product-category="Evening Gala"
+                                onclick="handleWishlistToggle(this)">
                                 <span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
                             </button>
                         </div>
@@ -366,8 +378,12 @@
                             <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                 data-alt="Macro product shot of a delicate platinum necklace"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YRX_lkUFzh45rwTqRyOBuKKx_x7zmDplnilfu0MQBIhCeFkyuiNNRtvB9rdVB00liDbbVPdKBlXoen6NNT3GMP6_cVCjl7fPqkLiesF4x-9wStcqT0aTlVSuVM-Kd1kk-TixLBOqetmFnoQarFqdJdzdKh8fmfCld6tOoeVYaShpdApgzAIXeWZlurdwc_YrYFEs9JgniPIFilMVwvLNtPdT4UQl_ZFJSfr3L4EW_iAvkbDGGYt7" />
-                            <button
-                                class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity wish-toggle-btn"
+                                data-product-name="Celestial Pendant"
+                                data-product-price="920"
+                                data-product-image="https://lh3.googleusercontent.com/aida-public/AB6AXuD6YRX_lkUFzh45rwTqRyOBuKKx_x7zmDplnilfu0MQBIhCeFkyuiNNRtvB9rdVB00liDbbVPdKBlXoen6NNT3GMP6_cVCjl7fPqkLiesF4x-9wStcqT0aTlVSuVM-Kd1kk-TixLBOqetmFnoQarFqdJdzdKh8fmfCld6tOoeVYaShpdApgzAIXeWZlurdwc_YrYFEs9JgniPIFilMVwvLNtPdT4UQl_ZFJSfr3L4EW_iAvkbDGGYt7"
+                                data-product-category="Heritage Collection"
+                                onclick="handleWishlistToggle(this)">
                                 <span class="material-symbols-outlined text-on-surface text-lg">favorite</span>
                             </button>
                         </div>
@@ -466,6 +482,7 @@
             </div>
         </div>
     </footer>
+    <script src="store.js"></script>
     <script>
         function toggleMenu() {
             const overlay = document.getElementById('mobile-menu-overlay');
@@ -496,6 +513,60 @@
                 header.classList.add('py-4', 'lg:py-6');
                 header.classList.remove('py-2', 'bg-white');
             }
+        });
+
+        // Detail page Add to Bag
+        const detailAddBtn = document.getElementById('product-detail-add-to-bag');
+        if (detailAddBtn) {
+            detailAddBtn.addEventListener('click', () => {
+                const name = detailAddBtn.getAttribute('data-product-name');
+                const price = parseFloat(detailAddBtn.getAttribute('data-product-price'));
+                const img = detailAddBtn.getAttribute('data-product-image');
+                const category = detailAddBtn.getAttribute('data-product-category');
+
+                window.addToCart(name, price, img, category);
+
+                const originalText = detailAddBtn.innerText;
+                detailAddBtn.innerText = "Added to Bag";
+                detailAddBtn.classList.replace('bg-primary', 'bg-gold-accent');
+                setTimeout(() => {
+                    detailAddBtn.innerText = originalText;
+                    detailAddBtn.classList.replace('bg-gold-accent', 'bg-primary');
+                }, 1500);
+            });
+        }
+
+        // Wishlist Toggling
+        function handleWishlistToggle(btn) {
+            const name = btn.getAttribute('data-product-name');
+            const price = parseFloat(btn.getAttribute('data-product-price'));
+            const img = btn.getAttribute('data-product-image');
+            const category = btn.getAttribute('data-product-category');
+
+            const isLiked = window.toggleWishlist(name, price, img, category);
+            updateHeartUI(btn, isLiked);
+        }
+
+        function updateHeartUI(btn, isLiked) {
+            const icon = btn.querySelector('.material-symbols-outlined');
+            if (isLiked) {
+                icon.style.fontVariationSettings = "'FILL' 1";
+                icon.style.color = "#C9A227";
+            } else {
+                icon.style.fontVariationSettings = "'FILL' 0";
+                icon.style.color = "";
+            }
+        }
+
+        // Sync heart icons on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const wishlist = window.getWishlist();
+            const wishlistNames = wishlist.map(item => item.name);
+            document.querySelectorAll('.wish-toggle-btn').forEach(btn => {
+                const name = btn.getAttribute('data-product-name');
+                const isLiked = wishlistNames.includes(name);
+                updateHeartUI(btn, isLiked);
+            });
         });
     </script>
 </body>
