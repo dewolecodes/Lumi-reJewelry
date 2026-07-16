@@ -263,63 +263,7 @@
 
                 <!-- Shopping Bag Rows Container -->
                 <div id="bag-items-list">
-                    <!-- Item 1: Ethereal Diamond Ring -->
-                    <div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row" data-price="8450" id="item-ethereal-ring">
-                        <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
-                            <div class="w-24 h-32 bg-surface-container-low overflow-hidden flex-shrink-0 border border-gold-accent/5">
-                                <img alt="Ethereal Diamond Ring" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPp4uAmKXUodJTZe5eatnhNXSyFchkKz5_RefSiX33jLDaFvw6pnCNvQJoU4LxRCYSmp5n-6oiDxLSd15aVi6AVRGWIak68JqCstaVq3tLIj9xNye6eYdTg0xqdbBBBWgMi8hYIN20eXiQu1g2b_jiL95ZCBjuj0tHTbqeFSJMm20_JLH85dWaVb_Ahe9WQDTItkagYXQeCHmpIusfwIWMdVGV3jwaqlIq0rp6LhyHogqGQZur5Vhg" />
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <h3 class="font-headline-md text-lg lg:text-xl text-primary">Ethereal Diamond Ring</h3>
-                                <p class="font-label-caps text-[9px] lg:text-[10px] tracking-[0.15em] text-outline uppercase">White Gold / 1.5 CT Oval</p>
-                                <p class="font-body-md text-sm text-gold-accent mt-2">$8,450.00</p>
-                            </div>
-                        </div>
-                        <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
-                            <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
-                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-ethereal-ring', -1)">remove</button>
-                                <span class="font-body-md text-sm qty-val">1</span>
-                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-ethereal-ring', 1)">add</button>
-                            </div>
-                        </div>
-                        <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
-                            <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
-                            <div class="flex items-center gap-4">
-                                <span class="font-body-lg text-primary font-medium row-total">$8,450.00</span>
-                                <button class="material-symbols-outlined text-outline hover:text-error transition-colors p-1" onclick="removeItem('item-ethereal-ring')">close</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 2: Brilliant Studs -->
-                    <div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row" data-price="2200" id="item-brilliant-studs">
-                        <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
-                            <div class="w-24 h-32 bg-surface-container-low overflow-hidden flex-shrink-0 border border-gold-accent/5">
-                                <img alt="Brilliant Studs" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24kzcmSpDUiuwzFDBirothUgQDC1R0_8lQpm2y_d0s6kJZjXF2lDVrfOUS4FmRReondjTZhVD8ZDqT8ZkzEdz4HbGSICLOdhn6sFDur2Ku7UsfHaHc88FcDKUvAsY9q9JRZnDgSjWeB_Yz04U5en2HNeeXAquh88dzev_i7Pt5EWSczeo5Lx1ODtVkur2SU0O7t198gLcrl2ZneFYgQuclaoIQA0AqC0bvjGsZx3tBNoc2IjgyZGL" />
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <h3 class="font-headline-md text-lg lg:text-xl text-primary">Brilliant Studs</h3>
-                                <p class="font-label-caps text-[9px] lg:text-[10px] tracking-[0.15em] text-outline uppercase">Platinum / 0.5 CT Pair</p>
-                                <p class="font-body-md text-sm text-gold-accent mt-2">$2,200.00</p>
-                            </div>
-                        </div>
-                        <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
-                            <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
-                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-brilliant-studs', -1)">remove</button>
-                                <span class="font-body-md text-sm qty-val">1</span>
-                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('item-brilliant-studs', 1)">add</button>
-                            </div>
-                        </div>
-                        <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
-                            <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
-                            <div class="flex items-center gap-4">
-                                <span class="font-body-lg text-primary font-medium row-total">$2,200.00</span>
-                                <button class="material-symbols-outlined text-outline hover:text-error transition-colors p-1" onclick="removeItem('item-brilliant-studs')">close</button>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Dynamically populated via JS -->
                 </div>
 
                 <!-- Empty State (Hidden) -->
@@ -414,66 +358,8 @@
 
         <!-- ==================== TAB 2: WISHLIST ==================== -->
         <div id="cart-tab-wishlist" class="cart-tab-content hidden">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Wishlist Item 1: Sapphire Night Drops -->
-                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative">
-                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
-                        <img alt="Sapphire Night Drops" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="images/sapphire-night-drops.jpg" />
-                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
-                            onclick="moveToCart('Sapphire Night Drops', 2450, 'images/sapphire-night-drops.jpg', 'Evening Gala')">
-                            Add to Bag
-                        </button>
-                    </div>
-                    <div class="text-center w-full relative">
-                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">Sapphire Night Drops</h4>
-                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">Evening Gala</p>
-                        <p class="font-headline-md text-gold-accent text-lg mb-4">$2,450.00</p>
-                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeWishlistItem(this)">
-                            <span class="material-symbols-outlined text-lg">delete</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Wishlist Item 2: Celestial Choker -->
-                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative">
-                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
-                        <img alt="Celestial Choker" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="images/celestial-choker.jpg" />
-                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
-                            onclick="moveToCart('Celestial Choker', 5800, 'images/celestial-choker.jpg', 'Heritage Collection')">
-                            Add to Bag
-                        </button>
-                    </div>
-                    <div class="text-center w-full relative">
-                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">Celestial Choker</h4>
-                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">Heritage Collection</p>
-                        <p class="font-headline-md text-gold-accent text-lg mb-4">$5,800.00</p>
-                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeWishlistItem(this)">
-                            <span class="material-symbols-outlined text-lg">delete</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Wishlist Item 3: Lumière Cuff -->
-                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative">
-                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
-                        <img alt="Lumière Cuff" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="images/lumiere-cuff.jpg" />
-                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
-                            onclick="moveToCart('Lumière Cuff', 5800, 'images/lumiere-cuff.jpg', 'Sculpted Forms')">
-                            Add to Bag
-                        </button>
-                    </div>
-                    <div class="text-center w-full relative">
-                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">Lumière Cuff</h4>
-                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">Sculpted Forms</p>
-                        <p class="font-headline-md text-gold-accent text-lg mb-4">$5,800.00</p>
-                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeWishlistItem(this)">
-                            <span class="material-symbols-outlined text-lg">delete</span>
-                        </button>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="wishlist-tab-grid">
+                <!-- Dynamically populated via JS -->
             </div>
         </div>
 
@@ -588,6 +474,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="store.js"></script>
     <script>
         // Tab system
         function switchCartTab(tabId) {
@@ -610,72 +497,142 @@
             };
 
             for (const key in buttons) {
-                if (key === tabId) {
-                    buttons[key].className = "pb-2 border-b-2 border-gold-accent text-gold-accent font-bold transition-all duration-300 focus:outline-none";
-                } else {
-                    buttons[key].className = "pb-2 border-b-2 border-transparent text-on-surface-variant hover:text-gold-accent transition-all duration-300 focus:outline-none";
+                if (buttons[key]) {
+                    if (key === tabId) {
+                        buttons[key].className = "pb-2 border-b-2 border-gold-accent text-gold-accent font-bold transition-all duration-300 focus:outline-none";
+                    } else {
+                        buttons[key].className = "pb-2 border-b-2 border-transparent text-on-surface-variant hover:text-gold-accent transition-all duration-300 focus:outline-none";
+                    }
                 }
             }
         }
 
-        // Qty and Recalculations
-        function adjustQty(itemId, delta) {
-            const itemRow = document.getElementById(itemId);
-            if (!itemRow) return;
+        // Render shopping bag dynamically from localStorage
+        function renderBag() {
+            const bagContainer = document.getElementById('bag-items-list');
+            const emptyState = document.getElementById('cart-empty-state');
+            const summaryCard = document.getElementById('cart-summary-card');
+            const cart = window.getCart();
 
-            const qtySpan = itemRow.querySelector('.qty-val');
-            let qty = parseInt(qtySpan.innerText);
-            qty += delta;
+            if (cart.length === 0) {
+                bagContainer.innerHTML = '';
+                bagContainer.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                summaryCard.classList.add('hidden');
+                
+                // Hide table header labels if bag is empty
+                const headerLabels = document.querySelector('#cart-tab-bag .hidden.md\\:grid');
+                if (headerLabels) headerLabels.classList.add('hidden');
+                return;
+            }
 
-            if (qty < 1) return;
+            bagContainer.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            summaryCard.classList.remove('hidden');
+            
+            const headerLabels = document.querySelector('#cart-tab-bag .hidden.md\\:grid');
+            if (headerLabels) headerLabels.classList.remove('hidden');
 
-            qtySpan.innerText = qty;
-
-            const unitPrice = parseFloat(itemRow.getAttribute('data-price'));
-            const rowTotalSpan = itemRow.querySelector('.row-total');
-            const totalRowCost = unitPrice * qty;
-            rowTotalSpan.innerText = `$${totalRowCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            bagContainer.innerHTML = cart.map((item, idx) => {
+                const itemId = `bag-item-${idx}`;
+                const rowTotal = item.price * item.qty;
+                return `
+                    <div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row" data-price="${item.price}" id="${itemId}">
+                        <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
+                            <div class="w-24 h-32 bg-surface-container-low overflow-hidden flex-shrink-0 border border-gold-accent/5">
+                                <img alt="${item.name}" class="w-full h-full object-cover" src="${item.img}" />
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h3 class="font-headline-md text-lg lg:text-xl text-primary">${item.name}</h3>
+                                <p class="font-label-caps text-[9px] lg:text-[10px] tracking-[0.15em] text-outline uppercase">${item.category}</p>
+                                <p class="font-body-md text-sm text-gold-accent mt-2">$${item.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
+                            <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
+                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty(${idx}, -1)">remove</button>
+                                <span class="font-body-md text-sm qty-val">${item.qty}</span>
+                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty(${idx}, 1)">add</button>
+                            </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
+                            <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
+                            <div class="flex items-center gap-4">
+                                <span class="font-body-lg text-primary font-medium row-total">$${rowTotal.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                                <button class="material-symbols-outlined text-outline hover:text-error transition-colors p-1" onclick="removeItem(${idx})">close</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
 
             recalcCartTotal();
         }
 
+        // Render wishlist tab dynamically from localStorage
+        function renderWishlistTab() {
+            const wishlistContainer = document.getElementById('wishlist-tab-grid');
+            const wishlist = window.getWishlist();
+
+            if (wishlist.length === 0) {
+                wishlistContainer.innerHTML = `
+                    <div class="col-span-full flex flex-col items-center justify-center text-center py-20 px-6">
+                        <span class="material-symbols-outlined text-gold-accent text-5xl mb-6">favorite</span>
+                        <h3 class="font-headline-md text-2xl text-primary mb-4">Your Wishlist is Empty</h3>
+                        <p class="text-on-surface-variant font-body-md text-sm max-w-sm mb-8">Save items here while shopping to view or purchase them later.</p>
+                        <a href="collection.html" class="bg-gold-accent text-white font-button text-xs uppercase tracking-widest px-10 py-4 hover:bg-charcoal transition-all duration-300 shadow-md">
+                            View Collections
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            wishlistContainer.innerHTML = wishlist.map((item, idx) => `
+                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative transition-opacity duration-300" id="wish-row-${idx}">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
+                        <img alt="${item.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="${item.img}" />
+                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                            onclick="moveToCart('${item.name.replace(/'/g, "\\'")}', ${item.price}, '${item.img}', '${item.category}')">
+                            Add to Bag
+                        </button>
+                    </div>
+                    <div class="text-center w-full relative">
+                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">${item.name}</h4>
+                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">${item.category}</p>
+                        <p class="font-headline-md text-gold-accent text-lg mb-4">$${item.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeWishlistItem('${item.name.replace(/'/g, "\\'")}', 'wish-row-${idx}')">
+                            <span class="material-symbols-outlined text-lg">delete</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Adjust Quantity
+        function adjustQty(idx, delta) {
+            const cart = window.getCart();
+            if (cart[idx]) {
+                cart[idx].qty = (cart[idx].qty || 1) + delta;
+                if (cart[idx].qty < 1) return;
+                window.saveCart(cart);
+                renderBag();
+            }
+        }
+
         // Remove item from bag
-        function removeItem(itemId) {
-            const itemRow = document.getElementById(itemId);
-            if (!itemRow) return;
-
-            itemRow.style.opacity = '0';
-            setTimeout(() => {
-                itemRow.remove();
-                recalcCartTotal();
-
-                // Check count of items
-                const bagContainer = document.getElementById('bag-items-list');
-                const remainingItems = bagContainer.querySelectorAll('.item-row').length;
-                
-                // Update counts
-                document.getElementById('tab-bag-count').innerText = remainingItems;
-                document.getElementById('cart-count').innerText = remainingItems;
-
-                if (remainingItems === 0) {
-                    bagContainer.classList.add('hidden');
-                    document.getElementById('cart-empty-state').classList.remove('hidden');
-                    document.getElementById('cart-summary-card').classList.add('hidden');
-                }
-            }, 300);
+        function removeItem(idx) {
+            const cart = window.getCart();
+            cart.splice(idx, 1);
+            window.saveCart(cart);
+            renderBag();
         }
 
         // Calculate and update order summary totals
         function recalcCartTotal() {
-            let subtotal = 0;
-            let bagCount = 0;
-
-            document.querySelectorAll('#bag-items-list .item-row').forEach(row => {
-                const qtyVal = parseInt(row.querySelector('.qty-val').innerText);
-                const price = parseFloat(row.getAttribute('data-price'));
-                subtotal += (price * qtyVal);
-                bagCount += qtyVal;
-            });
+            const cart = window.getCart();
+            let subtotal = cart.reduce((sum, item) => sum + (item.price * (item.qty || 1)), 0);
 
             const formattedSubtotal = `$${subtotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             const subtotalEl = document.getElementById('cart-subtotal');
@@ -683,99 +640,25 @@
 
             if (subtotalEl) subtotalEl.innerText = formattedSubtotal;
             if (totalEl) totalEl.innerText = formattedSubtotal;
-            
-            // Sync with navbar badge
-            const totalCount = document.querySelectorAll('#bag-items-list .item-row').length;
-            document.getElementById('tab-bag-count').innerText = totalCount;
-            document.getElementById('cart-count').innerText = totalCount;
         }
 
         // Move item from wishlist to active cart bag
         function moveToCart(itemName, price, imgUrl, category) {
-            const bagContainer = document.getElementById('bag-items-list');
-            const emptyState = document.getElementById('cart-empty-state');
-            const summaryCard = document.getElementById('cart-summary-card');
-
-            // Hide empty state if showing
-            emptyState.classList.add('hidden');
-            bagContainer.classList.remove('hidden');
-            summaryCard.classList.remove('hidden');
-
-            const itemId = 'item-' + itemName.toLowerCase().replace(/\s+/g, '-');
-
-            // Check if item already exists in cart, then increment quantity instead
-            const existingRow = document.getElementById(itemId);
-            if (existingRow) {
-                adjustQty(itemId, 1);
-                switchCartTab('bag');
-                return;
-            }
-
-            // Create new DOM row for item
-            const newRow = document.createElement('div');
-            newRow.className = "grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row opacity-0 transition-opacity duration-300";
-            newRow.id = itemId;
-            newRow.setAttribute('data-price', price);
-            newRow.innerHTML = `
-                <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
-                    <div class="w-24 h-32 bg-surface-container-low overflow-hidden flex-shrink-0 border border-gold-accent/5">
-                        <img alt="${itemName}" class="w-full h-full object-cover" src="${imgUrl}" />
-                    </div>
-                    <div class="flex flex-col gap-1">
-                        <h3 class="font-headline-md text-lg lg:text-xl text-primary">${itemName}</h3>
-                        <p class="font-label-caps text-[9px] lg:text-[10px] tracking-[0.15em] text-outline uppercase">${category}</p>
-                        <p class="font-body-md text-sm text-gold-accent mt-2">$${price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
-                    </div>
-                </div>
-                <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
-                    <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
-                        <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('${itemId}', -1)">remove</button>
-                        <span class="font-body-md text-sm qty-val">1</span>
-                        <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty('${itemId}', 1)">add</button>
-                    </div>
-                </div>
-                <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
-                    <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
-                    <div class="flex items-center gap-4">
-                        <span class="font-body-lg text-primary font-medium row-total">$${price.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
-                        <button class="material-symbols-outlined text-outline hover:text-error transition-colors p-1" onclick="removeItem('${itemId}')">close</button>
-                    </div>
-                </div>
-            `;
-
-            bagContainer.appendChild(newRow);
-            setTimeout(() => {
-                newRow.classList.remove('opacity-0');
-                recalcCartTotal();
-            }, 50);
-
+            window.addToCart(itemName, price, imgUrl, category);
+            renderBag();
             switchCartTab('bag');
         }
 
         // Delete an item from wishlist
-        function removeWishlistItem(btn) {
-            const card = btn.closest('.group');
-            if (!card) return;
-
-            card.style.opacity = '0';
-            setTimeout(() => {
-                card.remove();
-                const totalWishCount = document.querySelectorAll('#cart-tab-wishlist > div > div').length;
-                document.getElementById('tab-wish-count').innerText = totalWishCount;
-
-                if (totalWishCount === 0) {
-                    document.getElementById('cart-tab-wishlist').innerHTML = `
-                        <div class="flex flex-col items-center justify-center text-center py-20 px-6">
-                            <span class="material-symbols-outlined text-gold-accent text-5xl mb-6">favorite</span>
-                            <h3 class="font-headline-md text-2xl text-primary mb-4">Your Wishlist is Empty</h3>
-                            <p class="text-on-surface-variant font-body-md text-sm max-w-sm mb-8">Save items here while shopping to view or purchase them later.</p>
-                            <a href="collection.html" class="bg-gold-accent text-white font-button text-xs uppercase tracking-widest px-10 py-4 hover:bg-charcoal transition-all duration-300 shadow-md">
-                                View Collections
-                            </a>
-                        </div>
-                    `;
-                }
-            }, 300);
+        function removeWishlistItem(name, cardId) {
+            const card = document.getElementById(cardId);
+            if (card) {
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    window.toggleWishlist(name, 0, '', '');
+                    renderWishlistTab();
+                }, 300);
+            }
         }
 
         // Header Scroll Effect
@@ -812,6 +695,12 @@
                 document.body.style.overflow = '';
             }
         }
+
+        // Initialize lists on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderBag();
+            renderWishlistTab();
+        });
     </script>
 </body>
 

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>My Wishlist | Lumière Jewelry</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e9e8e7",
+                        "inverse-surface": "#303031",
+                        "surface-tint": "#5f5e5e",
+                        "on-surface": "#1b1c1c",
+                        "inverse-primary": "#c8c6c5",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#ecc246",
+                        "on-secondary-fixed": "#241a00",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "surface-container-low": "#f5f3f3",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-tertiary-container": "#838483",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-fixed-variant": "#454746",
+                        "on-error-container": "#93000a",
+                        "background": "#fbf9f9",
+                        "surface-bright": "#fbf9f9",
+                        "surface": "#fbf9f9",
+                        "surface-container": "#efeded",
+                        "tertiary-fixed-dim": "#c6c7c5",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dbdad9",
+                        "secondary-fixed": "#ffe08e",
+                        "primary-fixed": "#e5e2e1",
+                        "secondary": "#C9A227",
+                        "on-primary-fixed-variant": "#474746",
+                        "surface-variant": "#e3e2e2",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-secondary-container": "#735a00",
+                        "tertiary-container": "#1a1c1b",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#C9A227",
+                        "primary-container": "#1c1b1b",
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline": "#747878",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#e3e2e2",
+                        "tertiary-fixed": "#e2e3e1",
+                        "gold-accent": "#C9A227",
+                        "charcoal": "#1A1A1A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "section-gap": "140px",
+                        "section-gap-sm": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "label-caps": ["Montserrat"],
+                        "button": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .nav-link-underline {
+            position: relative;
+        }
+
+        .nav-link-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #C9A227;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-underline:hover::after {
+            width: 100%;
+        }
+
+        .glass-header {
+            background: rgba(251, 249, 249, 0.9);
+            backdrop-filter: blur(12px);
+        }
+
+        .subtle-shadow {
+            box-shadow: 0 20px 40px -15px rgba(26, 26, 26, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-gold-accent/30 overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+        id="mobile-menu-overlay" onclick="toggleMenu()"></div>
+    <div class="fixed top-0 right-0 h-full w-[80%] max-sm:w-[85%] max-w-sm bg-white z-[70] translate-x-full transition-transform duration-500 ease-in-out flex flex-col p-8"
+        id="mobile-menu">
+        <div class="flex justify-between items-center mb-12">
+            <span class="font-display-lg text-2xl text-primary tracking-tighter uppercase">Lumière</span>
+            <button class="text-primary hover:text-gold-accent transition-colors" onclick="toggleMenu()">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-8">
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="index.html" onclick="toggleMenu()">Home</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="collection.html" onclick="toggleMenu()">Collections</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="about.html" onclick="toggleMenu()">About</a>
+            <a class="font-button text-lg uppercase tracking-widest text-on-surface hover:text-gold-accent transition-colors"
+                href="contact.html" onclick="toggleMenu()">Contact</a>
+        </nav>
+        <div class="mt-auto pt-12 border-t border-gold-accent/10">
+            <p class="font-label-caps text-[10px] text-on-surface-variant uppercase mb-4">The Lumière Experience</p>
+            <div class="flex gap-4">
+                <a class="text-gold-accent" href="wish.html"><span
+                        class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span></a>
+                <a class="text-gold-accent" href="cart.html"><span
+                        class="material-symbols-outlined">shopping_bag</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 glass-header border-b border-gold-accent/20 shadow-sm transition-all duration-300">
+        <div
+            class="flex justify-between items-center px-6 md:px-12 lg:px-margin-desktop py-4 lg:py-6 max-w-container-max mx-auto">
+            <div class="flex-1 flex gap-4 lg:gap-8 items-center">
+                <nav class="hidden md:flex gap-4 lg:gap-6">
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="index.html">Home</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="collection.html">Collections</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="about.html">About</a>
+                    <a class="font-button text-xs lg:text-button uppercase tracking-widest text-on-surface-variant hover:text-gold-accent transition-colors duration-300 nav-link-underline"
+                        href="contact.html">Contact</a>
+                </nav>
+                <button class="md:hidden text-on-surface flex items-center" onclick="toggleMenu()">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+            <div class="flex-shrink-0 text-center">
+                <a class="font-display-lg text-2xl lg:text-headline-lg text-primary tracking-tighter uppercase"
+                    href="index.html">Lumière</a>
+            </div>
+            <div class="flex-1 flex justify-end items-center gap-4 lg:gap-6">
+                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 flex items-center" href="search.html">
+                    <span class="material-symbols-outlined font-bold">search</span>
+                </a>
+                <a class="hidden sm:block text-gold-accent hover:text-gold-accent transition-all duration-300 relative"
+                    href="wish.html">
+                    <span class="material-symbols-outlined font-bold" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                </a>
+                <a class="text-on-surface hover:text-gold-accent transition-all duration-300 relative"
+                    href="cart.html">
+                    <span class="material-symbols-outlined font-bold">shopping_bag</span>
+                    <span
+                        class="absolute -top-2 -right-2 bg-gold-accent text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold"
+                        id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="pt-36 lg:pt-44 pb-24 px-6 md:px-12 lg:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+        
+        <div class="border-b border-gold-accent/20 pb-6 mb-12 flex justify-between items-end">
+            <div>
+                <span class="font-label-caps text-xs text-gold-accent tracking-widest uppercase mb-1 block font-bold">Your Saved Creations</span>
+                <h1 class="font-display-lg text-3xl lg:text-4xl text-primary tracking-wide">My Wishlist</h1>
+            </div>
+            <a class="font-label-caps text-[10px] text-outline hover:text-gold-accent flex items-center gap-2 group transition-colors tracking-[0.15em] uppercase pb-2"
+                href="collection.html">
+                <span class="material-symbols-outlined text-[16px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Continue Browsing
+            </a>
+        </div>
+
+        <!-- Wishlist Items Grid -->
+        <div id="wishlist-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamically populated via JS -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="wishlist-empty-state" class="hidden flex flex-col items-center justify-center text-center py-24 px-6 bg-white border border-gold-accent/10 subtle-shadow">
+            <span class="material-symbols-outlined text-gold-accent text-6xl mb-6" style="font-variation-settings: 'FILL' 0; font-size: 60px;">favorite</span>
+            <h3 class="font-headline-md text-2xl text-primary mb-4">Your Wishlist is Empty</h3>
+            <p class="text-on-surface-variant font-body-md text-sm max-w-sm mb-8">Save creations here while exploring the boutique to keep track of your favorites.</p>
+            <a href="collection.html" class="bg-gold-accent text-white font-button text-xs uppercase tracking-widest px-12 py-4 hover:bg-charcoal transition-all duration-300 shadow-md">
+                Explore Collections
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest py-16 lg:py-section-gap px-6 md:px-12 lg:px-margin-desktop border-t-4 border-gold-accent">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-gutter">
+            <!-- Brand Info -->
+            <div class="col-span-1">
+                <span class="font-display-lg text-2xl lg:text-headline-md text-gold-accent uppercase block mb-6 lg:mb-8">Lumière</span>
+                <p class="text-on-surface-variant font-body-md text-xs lg:text-sm mb-6 lg:mb-8 leading-relaxed">Crafting light into timeless elegance since 1924. Our heritage is rooted in the pursuit of absolute brilliance.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Collections</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Engagement Rings</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="collection.html">Fine Jewelry</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="contact.html">Bespoke Service</a></li>
+                </ul>
+            </div>
+            <!-- Support -->
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Support</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Shipping &amp; Returns</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Size Guide</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Company -->
+            <div>
+                <h6 class="font-label-caps text-xs lg:text-label-caps uppercase text-primary mb-6 lg:mb-8 tracking-widest font-bold">Company</h6>
+                <ul class="space-y-3 lg:space-y-4">
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Sustainability</a></li>
+                    <li><a class="text-on-surface-variant font-body-md text-xs lg:text-sm hover:text-gold-accent underline decoration-gold-accent/40 underline-offset-4 transition-all" href="index.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto mt-12 lg:mt-24 pt-8 border-t border-gold-accent/20 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-on-surface-variant font-body-md text-[10px] lg:text-xs text-center md:text-left">© 2026 Lumière Jewelry. All rights reserved. <span class="text-gold-accent ml-2">Mastercrafted Heritage.</span></p>
+        </div>
+    </footer>
+
+    <!-- State & Render scripts -->
+    <script src="store.js"></script>
+    <script>
+        // Render wishlist content dynamically from localStorage
+        function renderWishlist() {
+            const grid = document.getElementById('wishlist-grid');
+            const emptyState = document.getElementById('wishlist-empty-state');
+            const wishlist = window.getWishlist();
+
+            if (wishlist.length === 0) {
+                grid.innerHTML = '';
+                grid.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+
+            grid.innerHTML = wishlist.map((item, idx) => `
+                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative transition-opacity duration-300" id="wish-card-${idx}">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
+                        <img alt="${item.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="${item.img}" />
+                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                            onclick="moveToBag('${item.name.replace(/'/g, "\\'")}', ${item.price}, '${item.img}', '${item.category}')">
+                            Add to Bag
+                        </button>
+                    </div>
+                    <div class="text-center w-full relative">
+                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">${item.name}</h4>
+                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">${item.category}</p>
+                        <p class="font-headline-md text-gold-accent text-lg mb-4">$${item.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeFromWishlist('${item.name.replace(/'/g, "\\'")}', 'wish-card-${idx}')">
+                            <span class="material-symbols-outlined text-lg">delete</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Action when Add to Bag is clicked in wishlist
+        function moveToBag(name, price, img, category) {
+            // Add to Cart
+            window.addToCart(name, price, img, category);
+            
+            // Remove from wishlist (optional/recommended, but let's keep it in wishlist, wait - if we move it, should we keep it? Let's keep it so they can see it, or move it. The wishlist moveToCart inside cart.html keeps it or deletes it on click. Let's keep it in wishlist but show a notification that it was added to bag!)
+            // To provide nice UX, let's keep it in wishlist and just alert "Added to Bag" on the button
+            const event = new CustomEvent('lumiere_add_to_cart_success');
+            window.dispatchEvent(event);
+            
+            // Show added to bag feedback
+            alert(`"${name}" has been added to your shopping bag.`);
+        }
+
+        // Action when Delete is clicked in wishlist
+        function removeFromWishlist(name, cardId) {
+            const card = document.getElementById(cardId);
+            if (card) {
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    window.toggleWishlist(name, 0, '', '');
+                    renderWishlist();
+                }, 300);
+            }
+        }
+
+        // Listen to external wishlist changes
+        window.addEventListener('lumiere_wishlist_updated', () => {
+            renderWishlist();
+        });
+
+        // Initialize view
+        window.addEventListener('DOMContentLoaded', () => {
+            renderWishlist();
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4', 'lg:py-6');
+                header.classList.add('bg-white');
+            } else {
+                header.classList.add('py-4', 'lg:py-6');
+                header.classList.remove('py-2');
+                header.classList.remove('bg-white');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const panel = document.getElementById('mobile-menu');
+            const isOpening = panel.classList.contains('translate-x-full');
+
+            if (isOpening) {
+                overlay.classList.remove('pointer-events-none', 'opacity-0');
+                overlay.classList.add('opacity-100', 'pointer-events-auto');
+                panel.classList.remove('translate-x-full');
+                panel.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+                panel.classList.add('translate-x-full');
+                panel.classList.remove('translate-x-0');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
