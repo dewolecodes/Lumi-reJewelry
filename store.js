@@ -82,6 +82,11 @@ window.updateNavCounts = function() {
         badge.innerText = cartCount;
     });
 
+    const mobileCartBadges = document.querySelectorAll('#mobile-cart-count');
+    mobileCartBadges.forEach(badge => {
+        badge.innerText = cartCount;
+    });
+
     // Update cart counts in tab headers on cart.html if they exist
     const tabBagCount = document.getElementById('tab-bag-count');
     if (tabBagCount) {
@@ -89,9 +94,22 @@ window.updateNavCounts = function() {
     }
 
     const wishlist = window.getWishlist();
+    const wishCount = wishlist.length;
+
+    // Update wishlist counts in navbar
+    const wishBadges = document.querySelectorAll('#wish-count');
+    wishBadges.forEach(badge => {
+        badge.innerText = wishCount;
+    });
+
+    const mobileWishBadges = document.querySelectorAll('#mobile-wish-count');
+    mobileWishBadges.forEach(badge => {
+        badge.innerText = wishCount;
+    });
+
     const tabWishCount = document.getElementById('tab-wish-count');
     if (tabWishCount) {
-        tabWishCount.innerText = wishlist.length;
+        tabWishCount.innerText = wishCount;
     }
 };
 
