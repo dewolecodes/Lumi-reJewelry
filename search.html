@@ -475,11 +475,15 @@
                 }
 
                 const wishlistNames = window.getWishlist().map(item => item.name);
+                const cartNames = window.getCart().map(item => item.name);
                 results.forEach(prod => {
                     const card = document.createElement('div');
                     card.className = "group flex flex-col items-center bg-white border border-gold-accent/5 p-4 md:p-6 shadow-sm hover:border-gold-accent/40 transition-colors duration-500";
                     const isLiked = wishlistNames.includes(prod.name);
                     const heartStyle = isLiked ? "font-variation-settings: 'FILL' 1; color: #C9A227;" : "";
+                    const isInCart = cartNames.includes(prod.name);
+                    const cartBtnText = isInCart ? "Remove from Bag" : "Add to Bag";
+                    const cartBtnClass = isInCart ? "bg-charcoal" : "bg-gold-accent";
                     card.innerHTML = `
                         <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
                             <img alt="${prod.name}" class="w-full h-full object-cover transition-transform duration-[800ms] group-hover:scale-105" src="${prod.image}" />
@@ -487,9 +491,9 @@
                                 onclick="toggleWishlistSearch(this, '${prod.name.replace(/'/g, "\\'")}', ${prod.price}, '${prod.image}', '${prod.category}')">
                                 <span class="material-symbols-outlined text-on-surface text-lg" style="${heartStyle}">favorite</span>
                             </button>
-                            <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-4 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                            <button class="absolute bottom-0 left-0 w-full ${cartBtnClass} text-white py-4 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
                                 onclick="addToCart(this, '${prod.name.replace(/'/g, "\\'")}', ${prod.price}, '${prod.image}', '${prod.category}')">
-                                Add to Bag
+                                ${cartBtnText}
                             </button>
                         </div>
                         <div class="text-center w-full">
@@ -524,15 +528,16 @@
 
         // Simulated Add to Bag
         function addToCart(btn, name, price, img, category) {
-            window.addToCart(name, price, img, category);
-
-            const originalText = btn.innerText;
-            btn.innerText = "Added to Bag";
-            btn.classList.replace('bg-gold-accent', 'bg-charcoal');
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.classList.replace('bg-charcoal', 'bg-gold-accent');
-            }, 1200);
+            const isAdded = window.toggleCart(name, price, img, category);
+            if (isAdded) {
+                btn.innerText = "Remove from Bag";
+                btn.classList.add('bg-charcoal');
+                btn.classList.remove('bg-gold-accent');
+            } else {
+                btn.innerText = "Add to Bag";
+                btn.classList.add('bg-gold-accent');
+                btn.classList.remove('bg-charcoal');
+            }
         }
 
         function toggleWishlistSearch(btn, name, price, img, category) {

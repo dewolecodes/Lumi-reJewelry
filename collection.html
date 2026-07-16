@@ -661,6 +661,18 @@
         }
 
         // Cart Interaction
+        function updateCartButtonUI(btn, isInCart) {
+            if (isInCart) {
+                btn.innerText = "Remove from Cart";
+                btn.classList.add('bg-charcoal');
+                btn.classList.remove('bg-gold-accent');
+            } else {
+                btn.innerText = "Add to Cart";
+                btn.classList.add('bg-gold-accent');
+                btn.classList.remove('bg-charcoal');
+            }
+        }
+
         const cartBtns = document.querySelectorAll('.add-to-cart-btn');
         cartBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -670,15 +682,8 @@
                 const img = card.querySelector('img').getAttribute('src');
                 const category = card.querySelector('p.font-label-caps').innerText.trim();
 
-                window.addToCart(name, price, img, category);
-
-                const originalText = btn.innerText;
-                btn.innerText = "Added to Bag";
-                btn.classList.replace('bg-gold-accent', 'bg-charcoal');
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.replace('bg-charcoal', 'bg-gold-accent');
-                }, 1500);
+                const isAdded = window.toggleCart(name, price, img, category);
+                updateCartButtonUI(btn, isAdded);
             });
         });
 
@@ -704,7 +709,7 @@
             }
         }
 
-        // Sync heart icons on load
+        // Sync heart and cart icons on load
         window.addEventListener('DOMContentLoaded', () => {
             const wishlist = window.getWishlist();
             const wishlistNames = wishlist.map(item => item.name);
@@ -712,6 +717,15 @@
                 const name = btn.getAttribute('data-product-name');
                 const isLiked = wishlistNames.includes(name);
                 updateHeartUI(btn, isLiked);
+            });
+
+            const cart = window.getCart();
+            const cartNames = cart.map(item => item.name);
+            document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+                const card = btn.closest('.product-item-card');
+                const name = card.querySelector('h4').innerText.trim();
+                const isInCart = cartNames.includes(name);
+                updateCartButtonUI(btn, isInCart);
             });
         });
 

@@ -297,6 +297,7 @@
             const grid = document.getElementById('wishlist-grid');
             const emptyState = document.getElementById('wishlist-empty-state');
             const wishlist = window.getWishlist();
+            const cartNames = window.getCart().map(item => item.name);
 
             if (wishlist.length === 0) {
                 grid.innerHTML = '';
@@ -308,40 +309,45 @@
             grid.classList.remove('hidden');
             emptyState.classList.add('hidden');
 
-            grid.innerHTML = wishlist.map((item, idx) => `
-                <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative transition-opacity duration-300" id="wish-card-${idx}">
-                    <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
-                        <img alt="${item.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="${item.img}" />
-                        <button class="absolute bottom-0 left-0 w-full bg-gold-accent text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
-                            onclick="moveToBag('${item.name.replace(/'/g, "\\'")}', ${item.price}, '${item.img}', '${item.category}')">
-                            Add to Bag
-                        </button>
+            grid.innerHTML = wishlist.map((item, idx) => {
+                const isInCart = cartNames.includes(item.name);
+                const btnText = isInCart ? "Remove from Bag" : "Add to Bag";
+                const btnClasses = isInCart ? "bg-charcoal" : "bg-gold-accent";
+                return `
+                    <div class="group flex flex-col items-center bg-white border border-gold-accent/10 p-6 shadow-sm relative transition-opacity duration-300" id="wish-card-${idx}">
+                        <div class="relative overflow-hidden aspect-[4/5] bg-surface-container-low mb-6 border border-gold-accent/5 w-full">
+                            <img alt="${item.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="${item.img}" />
+                            <button class="absolute bottom-0 left-0 w-full ${btnClasses} text-white py-3.5 font-button text-[10px] uppercase translate-y-full group-hover:translate-y-0 transition-transform duration-300 hover:bg-charcoal text-center"
+                                onclick="moveToBag(this, '${item.name.replace(/'/g, "\\'")}', ${item.price}, '${item.img}', '${item.category}')">
+                                ${btnText}
+                            </button>
+                        </div>
+                        <div class="text-center w-full relative">
+                            <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">${item.name}</h4>
+                            <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">${item.category}</p>
+                            <p class="font-headline-md text-gold-accent text-lg mb-4">$${item.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+                            <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeFromWishlist('${item.name.replace(/'/g, "\\'")}', 'wish-card-${idx}')">
+                                <span class="material-symbols-outlined text-lg">delete</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="text-center w-full relative">
-                        <h4 class="font-body-lg text-primary text-base lg:text-lg mb-1">${item.name}</h4>
-                        <p class="font-label-caps text-[9px] text-outline uppercase tracking-wider mb-2">${item.category}</p>
-                        <p class="font-headline-md text-gold-accent text-lg mb-4">$${item.price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
-                        <button class="absolute top-0 right-0 text-outline hover:text-error transition-colors" onclick="removeFromWishlist('${item.name.replace(/'/g, "\\'")}', 'wish-card-${idx}')">
-                            <span class="material-symbols-outlined text-lg">delete</span>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         // Action when Add to Bag is clicked in wishlist
-        function moveToBag(name, price, img, category) {
-            // Add to Cart
-            window.addToCart(name, price, img, category);
-            
-            // Remove from wishlist (optional/recommended, but let's keep it in wishlist, wait - if we move it, should we keep it? Let's keep it so they can see it, or move it. The wishlist moveToCart inside cart.html keeps it or deletes it on click. Let's keep it in wishlist but show a notification that it was added to bag!)
-            // To provide nice UX, let's keep it in wishlist and just alert "Added to Bag" on the button
-            const event = new CustomEvent('lumiere_add_to_cart_success');
-            window.dispatchEvent(event);
-            
-            // Show added to bag feedback
-            alert(`"${name}" has been added to your shopping bag.`);
+        function moveToBag(btn, name, price, img, category) {
+            const isAdded = window.toggleCart(name, price, img, category);
+            if (isAdded) {
+                btn.innerText = "Remove from Bag";
+                btn.classList.add('bg-charcoal');
+                btn.classList.remove('bg-gold-accent');
+            } else {
+                btn.innerText = "Add to Bag";
+                btn.classList.add('bg-gold-accent');
+                btn.classList.remove('bg-charcoal');
+            }
         }
 
         // Action when Delete is clicked in wishlist

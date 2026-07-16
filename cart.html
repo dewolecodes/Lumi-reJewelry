@@ -540,7 +540,7 @@
 
             bagContainer.innerHTML = cart.map((item, idx) => {
                 const itemId = `bag-item-${idx}`;
-                const rowTotal = item.price * item.qty;
+                const rowTotal = item.price;
                 return `
                     <div class="grid grid-cols-1 md:grid-cols-12 items-center py-10 border-b border-gold-accent/10 px-4 item-row" data-price="${item.price}" id="${itemId}">
                         <div class="col-span-12 md:col-span-6 flex gap-6 md:gap-8 items-center">
@@ -554,11 +554,7 @@
                             </div>
                         </div>
                         <div class="col-span-12 md:col-span-3 flex justify-center mt-6 md:mt-0">
-                            <div class="flex items-center border border-gold-accent/30 px-3 py-1.5 gap-6">
-                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty(${idx}, -1)">remove</button>
-                                <span class="font-body-md text-sm qty-val">${item.qty}</span>
-                                <button class="material-symbols-outlined text-outline hover:text-gold-accent transition-colors text-sm" onclick="adjustQty(${idx}, 1)">add</button>
-                            </div>
+                            <span class="font-body-md text-sm qty-val">1</span>
                         </div>
                         <div class="col-span-12 md:col-span-3 text-right flex flex-row md:justify-end items-center justify-between gap-6 mt-6 md:mt-0">
                             <span class="md:hidden font-label-caps text-[10px] text-outline uppercase">Total</span>
@@ -615,17 +611,6 @@
             `).join('');
         }
 
-        // Adjust Quantity
-        function adjustQty(idx, delta) {
-            const cart = window.getCart();
-            if (cart[idx]) {
-                cart[idx].qty = (cart[idx].qty || 1) + delta;
-                if (cart[idx].qty < 1) return;
-                window.saveCart(cart);
-                renderBag();
-            }
-        }
-
         // Remove item from bag
         function removeItem(idx) {
             const cart = window.getCart();
@@ -637,7 +622,7 @@
         // Calculate and update order summary totals
         function recalcCartTotal() {
             const cart = window.getCart();
-            let subtotal = cart.reduce((sum, item) => sum + (item.price * (item.qty || 1)), 0);
+            let subtotal = cart.reduce((sum, item) => sum + item.price, 0);
 
             const formattedSubtotal = `$${subtotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             const subtotalEl = document.getElementById('cart-subtotal');

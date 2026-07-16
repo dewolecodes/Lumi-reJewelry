@@ -21,9 +21,7 @@ window.saveCart = function(cart) {
 window.addToCart = function(name, price, img, category) {
     let cart = window.getCart();
     let existing = cart.find(item => item.name === name);
-    if (existing) {
-        existing.qty = (existing.qty || 1) + 1;
-    } else {
+    if (!existing) {
         cart.push({
             name: name,
             price: parseFloat(price),
@@ -33,6 +31,27 @@ window.addToCart = function(name, price, img, category) {
         });
     }
     window.saveCart(cart);
+};
+
+// Toggle cart item (Add if not present, remove if present)
+window.toggleCart = function(name, price, img, category) {
+    let cart = window.getCart();
+    let index = cart.findIndex(item => item.name === name);
+    let isAdded = false;
+    if (index > -1) {
+        cart.splice(index, 1);
+    } else {
+        cart.push({
+            name: name,
+            price: parseFloat(price),
+            img: img,
+            category: category,
+            qty: 1
+        });
+        isAdded = true;
+    }
+    window.saveCart(cart);
+    return isAdded;
 };
 
 // Helper to retrieve wishlist from localStorage

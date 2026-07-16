@@ -522,6 +522,18 @@
         });
 
         // Detail page Add to Bag
+        function updateCartButtonUI(btn, isInCart) {
+            if (isInCart) {
+                btn.innerText = "Remove from Bag";
+                btn.classList.add('bg-gold-accent', 'text-white');
+                btn.classList.remove('bg-primary', 'text-on-primary');
+            } else {
+                btn.innerText = "Add to Bag";
+                btn.classList.add('bg-primary', 'text-on-primary');
+                btn.classList.remove('bg-gold-accent', 'text-white');
+            }
+        }
+
         const detailAddBtn = document.getElementById('product-detail-add-to-bag');
         if (detailAddBtn) {
             detailAddBtn.addEventListener('click', () => {
@@ -530,15 +542,8 @@
                 const img = detailAddBtn.getAttribute('data-product-image');
                 const category = detailAddBtn.getAttribute('data-product-category');
 
-                window.addToCart(name, price, img, category);
-
-                const originalText = detailAddBtn.innerText;
-                detailAddBtn.innerText = "Added to Bag";
-                detailAddBtn.classList.replace('bg-primary', 'bg-gold-accent');
-                setTimeout(() => {
-                    detailAddBtn.innerText = originalText;
-                    detailAddBtn.classList.replace('bg-gold-accent', 'bg-primary');
-                }, 1500);
+                const isAdded = window.toggleCart(name, price, img, category);
+                updateCartButtonUI(detailAddBtn, isAdded);
             });
         }
 
@@ -564,7 +569,7 @@
             }
         }
 
-        // Sync heart icons on load
+        // Sync heart and cart icons on load
         window.addEventListener('DOMContentLoaded', () => {
             const wishlist = window.getWishlist();
             const wishlistNames = wishlist.map(item => item.name);
@@ -573,6 +578,14 @@
                 const isLiked = wishlistNames.includes(name);
                 updateHeartUI(btn, isLiked);
             });
+
+            const cart = window.getCart();
+            const cartNames = cart.map(item => item.name);
+            if (detailAddBtn) {
+                const name = detailAddBtn.getAttribute('data-product-name');
+                const isInCart = cartNames.includes(name);
+                updateCartButtonUI(detailAddBtn, isInCart);
+            }
         });
     </script>
 </body>
